@@ -1,0 +1,31 @@
+<ons-page modifier="readings" ng-controller="readingsCtrl" on-device-backbutton="app.navi.resetToPage('unlockreadings.html', {animation : 'slide'});">
+
+  <div compile="contents"></div>
+
+  <ons-bottom-toolbar>
+    <ons-row>
+
+      <ons-col class="action-col" ng-click="app.navi.pushPage('notesinterp.html');">
+        <div class="action-icon"><ons-icon icon="fa fa-comment"></ons-icon></div>
+        <div class="action-label">Interpretation</div>
+      </ons-col>
+
+      <ons-col class="action-col" ng-click="app.navi.pushPage('symbolism.html');">
+        <div class="action-icon"><ons-icon icon="fa fa-cube"></ons-icon></div>
+        <div class="action-label">Symbolism</div>
+      </ons-col>
+
+      <ons-col class="action-col" ng-click="app.navi.resetToPage('unlockreadings.html', {animation : 'slide'});">
+        <div class="action-icon"><ons-icon icon="fa fa-book"></ons-icon></div>
+        <div class="action-label"><span class="wide">Back to&nbsp;</span>Life Readings</div>
+      </ons-col>
+
+      <ons-col class="action-col" ng-click="app.navi.resetToPage('home.html', {animation : 'slide'});">
+        <div class="action-icon"><ons-icon icon="ion-home"></ons-icon></div>
+        <div class="action-label">Home</div>
+      </ons-col>
+
+    </ons-row>
+  </ons-bottom-toolbar>
+
+</ons-page>

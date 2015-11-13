@@ -1,0 +1,49 @@
+﻿<link rel="stylesheet" href="css/app.css" />
+
+
+<ons-page modifier="spele" ng-controller="speleCtrl" ng-init="init();" on-device-backbutton="app.gotoPage('analyse');">
+    <ons-toolbar fixed-style>
+        <div class="left">
+            <ons-button modifier="quiet" ng-click="onClose();"><ons-icon icon="ion-chevron-left"></ons-icon></ons-button>
+        </div>
+        <div class="center">Elements And Spirits</div>
+    </ons-toolbar>
+    <div class="result">
+        <p style="text-align:left">Tap on each of the heavenly stems and earthly branches for more about the elements and spirits.</p>
+        <ons-row class="header" style="margin-bottom: 10px;">
+            <ons-col>Hour</ons-col>
+            <ons-col>Day</ons-col>
+            <ons-col>Month</ons-col>
+            <ons-col>Year</ons-col>
+        </ons-row>
+        <ons-row class="body">
+            <ons-col ng-repeat="item in ret.fpc">
+                <div class="big-part purple-shadow">
+                    <fp-big-gonji data="{{item.stem}}" ng-click="onClickStem($index, 'stem');"></fp-big-gonji>
+                    <fp-big-gonji data="{{item.branch}}" ng-click="onClickStem($index, 'branch');" nosign></fp-big-gonji>
+                </div>
+                <div class="small-part">
+                    <fp-small-gonji data="{{item.stem1}}"></fp-small-gonji>
+                    <fp-small-gonji data="{{item.stem2}}"></fp-small-gonji>
+                    <fp-small-gonji data="{{item.stem3}}"></fp-small-gonji>
+                </div>
+            </ons-col>
+        </ons-row>
+        <ons-row>
+            <ons-col>
+                <div class="cdsa-desc">
+                    <div ng-show="unit == 1 && mode == 'stem'">
+                        {{desc}}
+                    </div>
+                    <div ng-show="unit != 1 && mode == 'stem'">
+                        <p ><strong>{{type}} </strong>{{typeDesc}}</p>
+                        <p><strong>{{typeLabel}} </strong>{{desc}}</p>
+                    </div>
+                    <div ng-show="mode == 'branch'">
+                        {{desc}}
+                    </div>
+                </div>
+            </ons-col>
+        </ons-row>
+    </div>
+</ons-page>

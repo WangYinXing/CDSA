@@ -1,0 +1,253 @@
+﻿<!doctype html>
+<meta name="viewport" content="width = 100, initial-scale = 1, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>CDSA</title>
+
+
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components-purple-theme.css">
+        
+    <!--
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components-dark-theme.css">
+    -->
+    <link rel="stylesheet" href="css/app.css" />
+    
+
+    
+
+    <script src="cordova.js"></script>
+    <script src="lib/onsen/js/angular/angular.js"></script>
+
+<!--###############################################################################################################################
+    #  MomentJS .........
+    ###############################################################################################################################-->
+    <script src="lib/moment.min.js"></script>
+
+<!--###############################################################################################################################
+    #  JQM .........
+    ###############################################################################################################################-->
+    <link rel="stylesheet" href="lib/jqm/jquery.mobile-1.4.5.custom.css" />
+    <link rel="stylesheet" href="lib/jqm/jquery.mobile.external-png-1.4.5.custom.css" />
+    <link rel="stylesheet" href="lib/jqm/jquery.mobile.icons-1.4.5.min.css" />
+    <link rel="stylesheet" href="lib/jqm-datebox/jqm-datebox.css" />
+    <link rel="stylesheet" href="lib/jqueryUI/jquery-ui.css" />
+
+    <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.css" />
+
+    <link rel="stylesheet" href="lib/slick/slick.css" />
+    <link rel="stylesheet" href="lib/slick/slick-theme.css" />
+
+
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/jquery/jquery-ui.min.js"></script>
+    <script src="lib/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/jqm-datebox/jqm-datebox.core.js"></script>
+    <script src="lib/jqm-datebox/jqm-datebox.mode.calbox.js"></script>
+    <script src="lib/jqm-datebox/jqm-datebox.mode.datebox.js"></script>
+    <script src="lib/jqm-datebox/jqm-datebox.mode.slidebox.js"></script>
+    <script src="lib/jqm-datebox/jqm-datebox.mode.flipbox.js"></script>
+    <script type="text/javascript" src="lib/jqm-datebox/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+
+    <script src="lib/owlcarousel/owl.carousel.js"></script>
+    <script src="lib/slick/slick.js"></script>
+
+    <script src="lib/onsen/js/onsenui.js"></script>
+
+<!--###############################################################################################################################
+    #  Controllers.........
+    ###############################################################################################################################-->
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/fpcalc.js"></script>
+    <script src="js/saveload.js"></script>
+    <script src="js/bingmap.js"></script>
+    <script src="js/unlockreading.js"></script>
+    
+
+    <script src="js/analyse.js"></script>
+    <script src="js/howtoanalyse.js"></script>
+    <script src="js/spele.js"></script>
+    <script src="js/luannual.js"></script>
+
+    
+
+
+<!--###############################################################################################################################
+    #  External JS and plugins .........
+    ###############################################################################################################################-->
+
+    <script src="js/directives.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/timepicker.js"></script>
+    <script src="js/iap.js"></script>
+
+<!--###############################################################################################################################
+    #  TimezoneDB Web service js .........
+    ###############################################################################################################################-->
+
+    <script src="lib/timezonedb/timezones.full.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery.isUnsafe = true;
+    </script>
+
+	<script>
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            StatusBar.hide();
+        }
+
+        // ons.disableAutoStatusBarFill();
+
+        //$.noConflict();
+        $.support.cors = true;
+        $.mobile.allowCrossDomainPages = true;
+        $.mobile.phonegapNavigationEnabled = true;
+
+        ons.ready(function () {
+            if (ons.platform.isAndroid())
+                initPushwooshForAndroid();
+            else if (ons.platform.isIOS())
+                initPushwooshForiOS();
+            else
+                initPushwooshForWindows();
+
+            //if (window.StatusBar) {
+            //StatusBar.hide();
+            //}
+            if (ons.platform.isIOS() && navigator.splashscreen) {
+                navigator.splashscreen.hide();
+            }
+
+            //alert(device.platform);
+        });
+
+        function initPushwooshForWindows() {
+            var pushNotification = cordova.require("com.pushwoosh.plugins.pushwoosh.PushNotification");
+
+            //set push notifications handler
+            document.addEventListener('push-notification', function (event) {
+                //get the notification payload
+                var notification = event.notification;
+
+                //display alert to the user for example
+                alert(notification.content);
+                //notification.content
+            });
+
+            //initialize the plugin
+            pushNotification.onDeviceReady({ appid: "E70D6-CE4DE", serviceName: "" });
+
+            //register for pushes
+            pushNotification.registerDevice(
+                function (status) {
+                    var pushToken = status;
+                    console.warn('push token: ' + pushToken);
+                    //alert('push token: ' + pushToken);
+                },
+                function (status) {
+                    console.warn(JSON.stringify(['failed to register ', status]));
+                    //alert(JSON.stringify(['failed to register ', status]));
+                }
+            );
+        }
+
+        function initPushwooshForAndroid() {
+            var pushNotification = window.plugins.pushNotification;
+
+            //set push notifications handler
+            document.addEventListener('push-notification', function (event) {
+                var title = event.notification.title;
+                var userData = event.notification.userdata;
+
+                if (typeof (userData) != "undefined") {
+                    console.log('user data: ' + JSON.stringify(userData));
+                }
+
+                ons.notification.alert({
+                    title: 'Notification',
+                    message: title
+                });
+            });
+
+            //initialize Pushwoosh with projectid: "GOOGLE_PROJECT_NUMBER", pw_appid : "PUSHWOOSH_APP_ID". This will trigger all pending push notifications on start.
+            pushNotification.onDeviceReady({ projectid: "791783412948", pw_appid: "E70D6-CE4DE" });
+
+            //register for pushes
+            pushNotification.registerDevice(
+                function (status) {
+                    var pushToken = status;
+                    console.log('push token: ' + pushToken);
+                },
+                function (status) {
+                    console.log(JSON.stringify(['failed to  register', status]));
+                }
+            );
+        }
+
+        function initPushwooshForiOS() {
+            var pushNotification = window.plugins.pushNotification;
+
+            //set push notification callback before we initialize the plugin
+            document.addEventListener('push-notification', function (event) {
+                //get the notification payload
+                var notification = event.notification;
+
+                //display alert to the user for example
+                ons.notification.alert({
+                    title: 'Notification',
+                    message: notification.aps.alert
+                });
+
+                //clear the app badge
+                pushNotification.setApplicationIconBadgeNumber(0);
+            });
+
+            //initialize the plugin
+            pushNotification.onDeviceReady({ pw_appid: "E70D6-CE4DE" });
+
+            //register for pushes
+            pushNotification.registerDevice(
+                function (status) {
+                    var deviceToken = status['deviceToken'];
+                    console.log('registerDevice: ' + deviceToken);
+                },
+                function (status) {
+                    console.log('failed to register : ' + JSON.stringify(status));
+                    alert(JSON.stringify(['failed to register ', status]));
+                }
+            );
+
+            //reset badges on app start
+            pushNotification.setApplicationIconBadgeNumber(0);
+        }
+
+
+    </script>
+
+
+    
+</head>
+
+<body class="campus" ng-controller="appCtrl">
+    <ons-navigator animation="slide" var="app.navi" page="home.html"></ons-navigator>
+    <!--<ons-navigator animation="slide" var="app.navi" page="unlockreadings.html"></ons-navigator>-->
+    <!--<ons-navigator animation="slide" var="app.navi" page="fpcalc.html"></ons-navigator>-->
+    <div class="page-transitioning">
+        <div class="loadingWheelWrapper">
+            <span class='waitforsec'>
+                Loading...
+            </span><br>
+            <!--<img src="img/ajax-loader.gif"/>-->
+        </div>
+    </div>
+</body>
+</html>

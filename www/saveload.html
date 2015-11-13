@@ -1,0 +1,24 @@
+﻿<ons-page modifier="saveload" ng-controller="saveloadCtrl" on-device-backbutton="app.gotoPage('fpcalc');">
+    <ons-toolbar fixed-style>
+        <div class="left">
+            <ons-button modifier="quiet" ng-click="onClose();"><ons-icon  icon="ion-chevron-left"></ons-icon></ons-button>
+        </div>
+        <div id="title" class="center">Your birth place.</div>   
+    </ons-toolbar>
+
+    <ons-list>
+        <ons-list-item id="toolbar">
+            <ons-row>
+                <ons-col width="70%" style="margin:10px" class="action-col">
+                    <input id="name" style="width:100%" type="text" placeholder="Please input name."/>
+                </ons-col>
+                <ons-col style="margin:10px">
+                    <button style="width:100%" ng-click="onSave();" class="button button-full">Save</button>
+                </ons-col>
+            </ons-row>
+        </ons-list-item>
+        <ons-list-item class="record-item list__item--tappable list__item__line-height" ng-repeat="item in items track by $index" modifier="chevron" ng-click="onClickItem($index);">
+            <ons-icon  icon="ion-clipboard"><span style="margin-left:10px; font-weight:100">{{item.name}}</span></ons-icon>
+        </ons-list-item>
+    </ons-list>
+</ons-page>

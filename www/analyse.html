@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="css/app.css" />
+
+
+<ons-page modifier="analyse" ng-controller="analyseCtrl" ng-init="init();" on-device-backbutton="app.gotoPage('fpcalc');">
+  <ons-toolbar fixed-style>
+      <div class="left">
+          <ons-button modifier="quiet" ng-click="onClose();"><ons-icon icon="ion-chevron-left"></ons-icon></ons-button>
+      </div>
+      <div class="center">Analyse chart</div>
+  </ons-toolbar>
+
+    <ons-list modifier="menu">
+        <ons-list-item modifier="chevron" ng-click="gotoPage('howtoanalyse');">
+            How To Analyse Four Pillars Charts
+        </ons-list-item>
+        <ons-list-item modifier="chevron" ng-click="gotoPage('spele');">
+            Elements And Spirits
+        </ons-list-item>
+        <ons-list-item modifier="chevron" ng-click="gotoPage('luannual');">
+            Luck And Annual Pillars
+        </ons-list-item>
+
+    </ons-list>
+</ons-page>

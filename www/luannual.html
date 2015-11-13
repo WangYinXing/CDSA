@@ -1,0 +1,91 @@
+﻿<link rel="stylesheet" href="css/app.css" />
+
+
+<ons-page modifier="spele" ng-controller="luannualCtrl" ng-init="init();" on-device-backbutton="app.gotoPage('analyse');">
+    <ons-toolbar fixed-style>
+        <div class="left">
+            <ons-button modifier="quiet" ng-click="onClose();"><ons-icon icon="ion-chevron-left"></ons-icon></ons-button>
+        </div>
+        <div class="center">Luck And Annual Pillars</div>
+    </ons-toolbar>
+    <div class="result">
+        <ons-row class="header" style="margin-bottom: 10px;">
+            <ons-col>Hour</ons-col>
+            <ons-col>Day</ons-col>
+            <ons-col>Month</ons-col>
+            <ons-col>Year</ons-col>
+        </ons-row>
+        <ons-row class="body">
+            <ons-col ng-repeat="item in ret.fpc">
+                <div class="big-part purple-shadow">
+                    <fp-big-gonji data="{{item.stem}}" ng-click="onClickStem($index);"></fp-big-gonji>
+                    <fp-big-gonji data="{{item.branch}}" ng-click="onClickBranch($index);" nosign></fp-big-gonji>
+                </div>
+                <div class="small-part">
+                    <fp-small-gonji data="{{item.stem1}}"></fp-small-gonji>
+                    <fp-small-gonji data="{{item.stem2}}"></fp-small-gonji>
+                    <fp-small-gonji data="{{item.stem3}}"></fp-small-gonji>
+                </div>
+            </ons-col>
+            
+        </ons-row>
+        <ons-row>
+            <ons-col>
+                <div style="display:none" class="cdsa-desc">
+                    <div ng-show="unit == 'Day' && mode == 'Stem'">
+                        {{desc}}
+                    </div>
+                    <div ng-show="unit != 'Day' && mode == 'Stem'">
+                        <p ><strong>{{type}} </strong>{{typeDesc}}</p>
+                        <p><strong>{{typeLabel}} </strong>{{desc}}</p>
+                    </div>
+                    <div ng-show="mode == 'Branch'">
+                        {{desc}}
+                    </div>
+                </div>
+            </ons-col>
+        </ons-row>
+        <ons-row>
+            <ons-col>
+                <div style="text-align:left;font-size:1em;margin:1em;">
+                    Swipe left or right to change the decade pillar
+                </div>
+            </ons-col>
+        </ons-row>
+        <ons-row>
+            <h4>Decade Pillar</h4>
+        </ons-row>
+        <ons-row>
+            <ons-col>
+                <div class="annual-pillar" >
+                    <div ng-repeat="pillar in ret.arrLP" class="item">
+                        <div >{{pillar.MS}}</div>
+                        <div class="pillar">
+                            <fp-big-gonji style="border:1px solid rgba(0, 0, 0, 0.5);" data="{{pillar.LPS}}"></fp-big-gonji>
+                            <fp-big-gonji style="border:1px solid rgba(0, 0, 0, 0.5);" data="{{pillar.LPB}}" nosign></fp-big-gonji>
+                        </div>
+                    </div>
+                </div>
+            </ons-col>
+        </ons-row>
+        <ons-row>
+            <h4>Annual Pillars</h4>
+        </ons-row>
+        <ons-row>
+            <ons-col>
+                <!--<div id="a" class="decade-pillar" style="width:100%">-->
+                    <div style="width:25%; display:inline-block; margin-bottom:1em; float:right" ng-repeat="pillar in arrAP">
+                        <div>{{pillar.MS}}</div>
+                        <div class="pillar" >
+                            <fp-big-gonji style="border:1px solid rgba(0, 0, 0, 0.5);" data="{{pillar.LPS}}"></fp-big-gonji>
+                            <fp-big-gonji style="border:1px solid rgba(0, 0, 0, 0.5);" data="{{pillar.LPB}}" nosign></fp-big-gonji>
+                        </div>
+                    </div>
+                <!--</div>-->
+            </ons-col>
+        </ons-row>
+        <br />
+    </div>
+
+    
+</ons-page>

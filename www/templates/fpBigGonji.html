@@ -1,0 +1,13 @@
+﻿ <div style="padding: 0.5em 0;" class="pillar-text" ng-class="colorClass()">
+    <div ng-hide="nosign" style="font-size: smaller;">
+        <span class="sign">{{d.sign}}</span>
+        <span class="type">{{d.type}}</span>
+    </div>
+    <div ng-show="nosign">
+        <span class="type">{{d.type}}</span>
+    </div>
+    <div>
+        <span class="char">{{d.char}}</span>
+        <span class="pinyin">{{d.pinyin}}</span>
+    </div>
+</div>

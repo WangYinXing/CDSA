@@ -1,0 +1,36 @@
+﻿<ons-page modifier="bingmap" ng-controller="bingmapCtrl" on-device-backbutton="app.gotoPage('fpcalc');">
+
+    <div id="popup">
+        <div id="map-container"></div>
+    </div>
+
+
+    <ons-toolbar fixed-style>
+        <div class="left">
+            <ons-button id="back" modifier="quiet" ng-click="onClose();"><ons-icon icon="ion-chevron-left"></ons-icon></ons-button>
+        </div>
+        <div id="title" class="center">Your birth place.</div>
+    </ons-toolbar>
+
+    <ons-bottom-toolbar>
+        <ons-row>
+            <ons-col class="action-col" ng-click="onClickOK();">
+                <div class="action-icon"><ons-icon icon="ion-checkmark-circled"></ons-icon></div>
+                <div class="action-label">OK</div>
+            </ons-col>
+            <ons-col class="action-col" ng-click="onClose();">
+                <div class="action-icon"><ons-icon icon="ion-close-circled"></ons-icon></div>
+                <div class="action-label">Cancel</div>
+            </ons-col>
+        </ons-row>
+    </ons-bottom-toolbar>
+    
+    <div class="blackScreen">
+        <div class="loadingWheelWrapper">
+            <span class='waitforsec'>
+                Loading map now...
+            </span><br>
+            <!--<img src="img/ajax-loader.gif"/>-->
+        </div>
+    </div>
+</ons-page>

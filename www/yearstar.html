@@ -1,0 +1,36 @@
+<ons-page modifier="yearstar" ng-controller="yearstarCtrl">
+
+  <ons-toolbar fixed-style>
+    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">Year Star Reading</div>
+  </ons-toolbar>
+
+
+  <p>This free reading is based on your year of birth.</p>
+
+  <div style="margin-top: 2em;">
+    <p style="margin-bottom: 0.5em;">You were born in the year of:</p>
+    <strong style="margin-left: 0.5em;">{{d.ystype}}</strong>
+    <br/>
+    <strong style="margin-left: 0.5em;">{{d.ybtype}}</strong>
+    <br/>
+    <p> Your Year Star is: <strong>{{d.yearstar}}</strong></p>
+  </div>
+
+  <div style="margin-top: 2em;">
+    <p> Your Year Star Reading is: </p>
+
+    <p style="margin-bottom: 0.5em;"><strong>Metaphor</strong>: {{d.metaphor}}</p>
+    <p style="margin-top: 0.5em;"><strong>Explanation</strong>: {{d.explanation}}</p>
+  </div>
+
+
+  <p style="margin-top: 2em; font-size: large;"><em>
+    There is more to your fate and fortune than the Year Star reading.
+    To get your full Chinese Destiny Stars Astrology life reading, go back by tapping the
+    <!--<ons-icon icon="ion-ios-arrow-back" size="36px"></ons-icon>-->
+    < Back icon at the top of the page,
+    then scroll down to tap on the green Destiny Numeral.
+  </em></p>
+
+</ons-page>

@@ -1,0 +1,48 @@
+<ons-page modifier="home" ng-controller="homeCtrl" id="home-page">
+
+  <div ons-if-orientation="portrait"><div class="cover-portrait"></div></div>
+  <div ons-if-orientation="landscape"><div class="cover-landscape"></div></div>
+
+  <ons-list modifier="menu">
+    <ons-list-item modifier="chevron" ng-click="app.navi.pushPage('whatdsa.html');">
+      What is Chinese Destiny Stars Astrology?
+    </ons-list-item>
+    <ons-list-item modifier="chevron" ng-click="gotoPage('fpcalc');">
+      <div>Four Pillars Calculator</div>
+    </ons-list-item>
+    <ons-list-item modifier="chevron" ng-click="app.navi.pushPage('whomgv.html');">
+      Who was Master Ghost Valley ?
+    </ons-list-item>
+    <ons-list-item modifier="chevron" ng-click="app.navi.pushPage('unlockreadings.html');">
+      100 Life Readings from Master Ghost Valley
+    </ons-list-item>
+      
+  </ons-list>
+
+  <ons-bottom-toolbar>
+    <ons-row>
+
+      <ons-col class="action-col" ng-click="app.navi.pushPage('about.html');">
+        <div class="action-icon"><ons-icon icon="ion-information-circled"></ons-icon></div>
+        <div class="action-label">About</div>
+      </ons-col>
+
+      <ons-col class="action-col" ng-click="shareViaFacebook();">
+        <div class="action-icon"><ons-icon icon="ion-social-facebook"></ons-icon></div>
+        <div class="action-label">Facebook</div>
+      </ons-col>
+
+      <ons-col class="action-col" ng-click="shareViaTwitter();">
+        <div class="action-icon"><ons-icon icon="ion-social-twitter"></ons-icon></div>
+        <div class="action-label">Twitter</div>
+      </ons-col>
+
+      <ons-col class="action-col" ng-click="shareViaEmail();">
+        <div class="action-icon"><ons-icon icon="ion-share"></ons-icon></div>
+        <div class="action-label">Email</div>
+      </ons-col>
+
+    </ons-row>
+  </ons-bottom-toolbar>
+
+</ons-page>

@@ -1,0 +1,254 @@
+{
+  "DS_Footer": "This is just a glimpse. You need to interpret the whole four pillars chart to get a fuller picture of the person's qualities.",
+
+  "Jia": {
+    "DS": "The daymaster (日主) is Jia (甲)yang wood. The daymaster represents the spirit of the person in the four pillars chart. A yang wood personality is typically forward-thinking. and tends to be determined about initiating and leading.",
+    "HS": {
+      "Wood": [ "is the parallel spirit (比劫) and represents friends and competitors in your chart.", "is friendly parallel (比肩).", "is unfriendly parallel(劫財)." ],
+      "Water": [ "is the resource spirit (印) and represents parents and mentors.", "is unbecoming resource (偏印).", "is proper resource (正印)." ],
+      "Metal": [ "is the power spirit (官) and represents ambition and authority.", "is unbecoming power (七殺).", "is proper power (正官)." ],
+      "Earth": [ "is the wealth spirit (財)and represents money and assets.", "is unbecoming wealth (偏財).", "is proper wealth (正財)." ],
+      "Fire": [ "is the output spirit (食傷)and represents performance and creativity.", "is gracious output (食神).", "is drastic output (傷官)." ]
+    },
+    "BR": {
+      "Rat": "The Rat, Zi (子) contains yin water. Yin water, Gui (癸) is proper resource (正印).",
+      "Ox": "The Ox, Chou (丑) contains yin earth and yin water, and stores yin metal.Yin earth, Ji (己) is proper wealth (正財).Yin water, Gui (癸) is proper resource (正印).Yin metal, Xin (辛) is proper power (正官).",
+      "Tiger": "The Tiger, Yin (寅) contains yang wood, yang fire and yang earth. Yang wood, Jia (甲) is friendly parallel (比肩).Yang fire, Bing (丙) is gracious output (食神).Yang earth, Wu (戊) is unbecoming wealth (偏財).",
+      "Rabbit": "The Rabbit, Mao (卯) contains yin wood.Yin wood, Yi (乙) is unfriendly parallel(劫財).",
+      "Dragon": "The Dragon, Chen (辰) contains yang earth, yin wood and stores yin water.Yang earth, Wu (戊) is unbecoming wealth (偏財).Yin wood, Yi (乙) is unfriendly parallel(劫財). Yin water, Gui (癸) is proper resource (正印).",
+      "Snake": "The Snake, Si (巳) contains yang fire, yang earth and yang metal.Yang fire, Bing (丙) is gracious output (食神).Yang earth, Wu (戊) is unbecoming wealth (偏財).Yang metal, Geng (庚) is unbecoming power (七殺).",
+      "Horse": "The Horse,Wu (午) contains yin fire and yin earth.Yin fire, Ding (丁) is drastic output (傷官).Yin earth, Ji (己) is proper wealth (正財).",
+      "Goat": "The Goat,Wei(未) contains yin earth, yin fire and stores yin wood. Yin earth, Ji (己) is proper wealth (正財).Yin fire, Ding (丁) is drastic output (傷官).Yin wood, Yi (乙) is unfriendly parallel(劫財).",
+      "Monkey": "The Monkey, Shen (申) contains yang metal, yang water and yang earth.Yang metal, Geng (庚) is unbecoming power (七殺).Yang water, Ren (壬) is unbecoming resource (偏印).Yang earth, Wu (戊) is unbecoming wealth (偏財).",
+      "Rooster": "The Rooster, You (酉) contains yin metal.Yin metal, Xin (辛) is proper power (正官).",
+      "Dog": "The Dog, Xu (戌) contains yang earth, yin metal and stores yin fire.Yang earth, Wu (戊) is unbecoming wealth (偏財).Yin metal, Xin (辛) is proper power (正官).Yin fire, Ding (丁) is drastic output (傷官).",
+      "Pig": "The Pig, Hai (亥) contains yang water and yang wood.Yang water, Ren (壬) is unbecoming resource (偏印).Yang wood, Jia (甲) is friendly parallel (比肩)."
+    }
+  },
+
+  "Yi": {
+    "DS": "The daymaster (日主) is Yi (乙)yi wood. The daymaster represents the spirit of the person in the four pillars chart.A yin wood personality typically likes to make things happen, and is willing to be accommodating in order to reach a goal.",
+    "HS": {
+      "Wood": [ "is the parallel spirit (比劫) and represents friends and competitors in your chart.", "is unfriendly parallel(劫財).", "is friendly parallel (比肩)." ],
+      "Water": [ "is the resource spirit (印) and represents parents and mentors.", "is proper resource (正印).", "is unbecoming resource (偏印)." ],
+      "Metal": [ "is the power spirit (官) and represents ambition and authority.", "is proper power (正官).", "is unbecoming power (七殺)." ],
+      "Earth": [ "is the wealth spirit (財)and represents money and assets.", "is proper wealth (正財).", "is unbecoming wealth (偏財)." ],
+      "Fire": [ "is the output spirit (食傷)and represents performance and creativity.", "is drastic output (傷官).", "is gracious output (食神)." ]
+    },
+    "BR": {
+      "Rat": "The Rat, Zi (子) contains yin water. Yin water, Gui (癸) is unbecoming resource (偏印).",
+      "Ox": "The Ox, Chou (丑) contains yin earth and yin water, and stores yin metal.Yin earth, Ji (己) is unbecoming wealth (偏財).Yin water, Gui (癸) is unbecoming resource (偏印).Yin metal, Xin (辛) is unbecoming power (七殺).",
+      "Tiger": "The Tiger, Yin (寅) contains yang wood, yang fire and yang earth. Yang wood, Jia (甲) is unfriendly parallel(劫財). Yang fire, Bing (丙) is drastic output (傷官). Yang earth, Wu (戊) is proper wealth (正財).",
+      "Rabbit": "The Rabbit, Mao (卯) contains yin wood.Yin wood, Yi (乙) is friendly parallel (比肩).",
+      "Dragon": "The Dragon, Chen (辰) contains yang earth, yin wood and stores yin water.Yang earth, Wu (戊) is proper wealth (正財).Yin wood, Yi (乙) is friendly parallel (比肩).Yin water, Gui (癸) is unbecoming resource (偏印).",
+      "Snake": "The Snake, Si (巳) contains yang fire, yang earth and yang metal.Yang fire, Bing (丙) is drastic output (傷官).Yang earth, Wu (戊) is proper wealth (正財).Yang metal, Geng (庚) is proper power (正官).",
+      "Horse": "The Horse,Wu (午) contains yin fire and yin earth.Yin fire, Ding (丁) is gracious output (食神).Yin earth, Ji (己) is unbecoming wealth (偏財).",
+      "Goat": "The Goat,Wei(未) contains yin earth, yin fire and stores yin wood. Yin earth, Ji (己) is unbecoming wealth (偏財).Yin fire, Ding (丁) is gracious output (食神).Yin wood, Yi (乙) is friendly parallel (比肩).",
+      "Monkey": "The Monkey, Shen (申) contains yang metal, yang water and yang earth. Yang metal, Geng (庚) is proper power (正官).Yang water, Ren (壬) is proper resource (正印).Yang earth, Wu (戊) is proper wealth (正財).",
+      "Rooster": "The Rooster, You (酉) contains yin metal.Yin metal, Xin (辛) is unbecoming power (七殺).",
+      "Dog": "The Dog, Xu (戌) contains yang earth, yin metal and stores yin fire.Yang earth, Wu (戊) is proper wealth (正財).Yin metal, Xin (辛) is unbecoming power (七殺).Yin fire, Ding (丁) is gracious output (食神).",
+      "Pig": "The Pig, Hai (亥) contains yang water and yang wood.Yang water, Ren (壬) is proper resource (正印).Yang wood, Jia (甲) is unfriendly parallel(劫財)."
+    }
+  },
+
+  "Bing": {
+    "DS": "The daymaster (日主) is Bing (丙)yang fire. The daymaster represents the spirit of the person in the four pillars chart. A yang fire personality tends to be lively and excitable. Quick to respond and can come across as passionate.",
+    "HS": {
+      "Wood": [ "is the resource spirit (印) and represents parents and mentors.", "is unbecoming resource (偏印).", "is proper resource (正印)." ],
+      "Water": [ "is the power spirit (官) and represents ambition and authority.", "is unbecoming power (七殺).", "is proper power (正官)." ],
+      "Metal": [ "is the wealth spirit (財)and represents money and assets.", "is unbecoming wealth (偏財).", "is proper wealth (正財)." ],
+      "Earth": [ "is the output spirit (食傷)and represents performance and creativity.", "is gracious output (食神).", "is drastic output (傷官)." ],
+      "Fire": [ "is the parallel spirit (比劫) and represents friends and competitors in your chart.", "is friendly parallel (比肩).", "is unfriendly parallel(劫財)." ]
+    },
+    "BR": {
+      "Rat": "The Rat, Zi (子) contains yin water.Yin water, Gui (癸) is proper power (正官).",
+      "Ox": "The Ox, Chou (丑) contains yin earth and yin water, and stores yin metal.Yin earth, Ji (己) is drastic output (傷官).Yin water, Gui (癸) is proper power (正官).Yin metal, Xin (辛) is proper wealth (正財).",
+      "Tiger": "The Tiger, Yin (寅) contains yang wood, yang fire and yang earth. Yang wood, Jia (甲) is unbecoming resource (偏印). Yang fire, Bing (丙) is friendly parallel (比肩).Yang earth, Wu (戊) is gracious output (食神).",
+      "Rabbit": "The Rabbit, Mao (卯) contains yin wood.Yin wood, Yi (乙) is proper resource (正印).",
+      "Dragon": "The Dragon, Chen (辰) contains yang earth, yin wood and stores yin water.Yang earth, Wu (戊) is gracious output (食神).Yin wood, Yi (乙) is proper resource (正印).Yin water, Gui (癸) is proper power (正官).",
+      "Snake": "The Snake, Si (巳) contains yang fire, yang earth and yang metal.Yang fire, Bing (丙) is friendly parallel (比肩).Yang earth, Wu (戊) is gracious output (食神).Yang metal, Geng (庚) is unbecoming wealth (偏財).",
+      "Horse": "The Horse,Wu (午) contains yin fire and yin earth.Yin fire, Ding (丁) is unfriendly parallel(劫財). Yin earth, Ji (己) is drastic output (傷官).",
+      "Goat": "The Goat,Wei(未) contains yin earth, yin fire and stores yin wood. Yin earth, Ji (己) is drastic output (傷官).Yin fire, Ding (丁) is unfriendly parallel(劫財). Yin wood, Yi (乙) is proper resource (正印).",
+      "Monkey": "The Monkey, Shen (申) contains yang metal, yang water and yang earth. Yang metal, Geng (庚) is unbecoming wealth (偏財).Yang water, Ren (壬) is unbecoming power (七殺).Yang earth, Wu (戊) is gracious output (食神).",
+      "Rooster": "The Rooster, You (酉) contains yin metal.Yin metal, Xin (辛) is proper wealth (正財).",
+      "Dog": "The Dog, Xu (戌) contains yang earth, yin metal and stores yin fire.Yang earth, Wu (戊) is gracious output (食神).Yin metal, Xin (辛) is proper wealth (正財).Yin fire, Ding (丁) is unfriendly parallel(劫財).",
+      "Pig": "The Pig, Hai (亥) contains yang water and yang wood.Yang water, Ren (壬) is unbecoming power (七殺).Yang wood, Jia (甲) is unbecoming resource (偏印)."
+    }
+  },
+
+
+  "Ding": {
+    "DS": "The daymaster (日主) is Ding (丁)yin fire. The daymaster represents the spirit of the person in the four pillars chart.A yin fire personality is typically warm and enthusiastic, presenting a charming and charismatic impression.",
+    "HS": {
+      "Wood": [ "is the resource spirit (印) and represents parents and mentors.", "is proper resource (正印).", "is unbecoming resource (偏印)." ],
+      "Water": [ "is the power spirit (官) and represents ambition and authority.", "is proper power (正官).", "is unbecoming power (七殺)." ],
+      "Metal": [ "is the wealth spirit (財)and represents money and assets.", "is proper wealth (正財).", "is unbecoming wealth (偏財)." ],
+      "Earth": [ "is the output spirit (食傷)and represents performance and creativity.", "is drastic output (傷官).", "is gracious output (食神)." ],
+      "Fire": [ "is the parallel spirit (比劫) and represents friends and competitors in your chart.", "is unfriendly parallel(劫財).", "is friendly parallel (比肩)." ]
+    },
+    "BR": {
+      "Rat": "The Rat, Zi (子) contains yin water. Yin water, Gui (癸) is unbecoming power (七殺).",
+      "Ox": "The Ox, Chou (丑) contains yin earth and yin water, and stores yin metal.Yin earth, Ji (己) is gracious output (食神).Yin water, Gui (癸) is unbecoming power (七殺).Yin metal, Xin (辛) is unbecoming wealth (偏財).",
+      "Tiger": "The Tiger, Yin (寅) contains yang wood, yang fire and yang earth. Yang wood, Jia (甲) is proper resource (正印).Yang fire, Bing (丙) is unfriendly parallel(劫財). Yang earth, Wu (戊) is drastic output (傷官).",
+      "Rabbit": "The Rabbit, Mao (卯) contains yin wood.Yin wood, Yi (乙) is unbecoming resource (偏印).",
+      "Dragon": "The Dragon, Chen (辰) contains yang earth, yin wood and stores yin water.Yang earth, Wu (戊) is drastic output (傷官).Yin wood, Yi (乙) is unbecoming resource (偏印).Yin water, Gui (癸) is unbecoming power (七殺).",
+      "Snake": "The Snake, Si (巳) contains yang fire, yang earth and yang metal.Yang fire, Bing (丙) is unfriendly parallel(劫財). Yang earth, Wu (戊) is drastic output (傷官).Yang metal, Geng (庚) is proper wealth (正財).",
+      "Horse": "The Horse,Wu (午) contains yin fire and yin earth.Yin fire, Ding (丁) is friendly parallel (比肩).Yin earth, Ji (己) is gracious output (食神).",
+      "Goat": "The Goat,Wei(未) contains yin earth, yin fire and stores yin wood. Yin earth, Ji (己) is gracious output (食神).Yin fire, Ding (丁) is friendly parallel (比肩).Yin wood, Yi (乙) is unbecoming resource (偏印).",
+      "Monkey": "The Monkey, Shen (申) contains yang metal, yang water and yang earth. Yang metal, Geng (庚) is proper wealth (正財).Yang water, Ren (壬) is proper power (正官).Yang earth, Wu (戊) is drastic output (傷官).",
+      "Rooster": "The Rooster, You (酉) contains yin metal.Yin metal, Xin (辛) is unbecoming wealth (偏財).",
+      "Dog": "The Dog, Xu (戌) contains yang earth, yin metal and stores yin fire.Yang earth, Wu (戊) is drastic output (傷官).Yin metal, Xin (辛) is unbecoming wealth (偏財).Yin fire, Ding (丁) is friendly parallel (比肩).",
+      "Pig": "The Pig, Hai (亥) contains yang water and yang wood.Yang water, Ren (壬) is proper power (正官).Yang wood, Jia (甲) is proper resource (正印)."
+    }
+  },
+
+  "Wu": {
+    "DS": "The daymaster (日主) is Wu (戊)yang earth. The daymaster represents the spirit of the person in the four pillars chart. A yang earth personality is usually reliable and practical, with a tendency to stick with ideas, principles and people.",
+    "HS": {
+      "Wood": [ "is the power spirit (官) and represents ambition and authority.", "is unbecoming power (七殺).", "is proper power (正官)." ],
+      "Water": [ "is the wealth spirit (財)and represents money and assets.", "is unbecoming wealth (偏財).", "is proper wealth (正財)." ],
+      "Metal": [ "is the output spirit (食傷)and represents performance and creativity.", "is gracious output (食神).", "is drastic output (傷官)." ],
+      "Earth": [ "is the parallel spirit (比劫) and represents friends and competitors in your chart.", "is friendly parallel (比肩).", "is unfriendly parallel(劫財)." ],
+      "Fire": [ "is the resource spirit (印) and represents parents and mentors.", "is unbecoming resource (偏印).", "is proper resource (正印)." ]
+    },
+    "BR": {
+      "Rat": "The Rat, Zi (子) contains yin water.Yin water, Gui (癸) is proper wealth (正財).",
+      "Ox": "The Ox, Chou (丑) contains yin earth and yin water, and stores yin metal.Yin earth, Ji (己) is unfriendly parallel(劫財). Yin water, Gui (癸) is proper wealth (正財).Yin metal, Xin (辛) is drastic output (傷官).",
+      "Tiger": "The Tiger, Yin (寅) contains yang wood, yang fire and yang earth. Yang wood, Jia (甲) is unbecoming power (七殺).Yang fire, Bing (丙) is unbecoming resource (偏印).Yang earth, Wu (戊) is friendly parallel (比肩).",
+      "Rabbit": "The Rabbit, Mao (卯) contains yin wood.Yin wood, Yi (乙) is proper power (正官).",
+      "Dragon": "The Dragon, Chen (辰) contains yang earth, yin wood and stores yin water.Yang earth, Wu (戊) is friendly parallel (比肩).Yin wood, Yi (乙) is proper power (正官).Yin water, Gui (癸) is proper wealth (正財).",
+      "Snake": "The Snake, Si (巳) contains yang fire, yang earth and yang metal.Yang fire, Bing (丙) is unbecoming resource (偏印).Yang earth, Wu (戊) is friendly parallel (比肩).Yang metal, Geng (庚) is gracious output (食神).",
+      "Horse": "The Horse,Wu (午) contains yin fire and yin earth.Yin fire, Ding (丁) is proper resource (正印).Yin earth, Ji (己) is unfriendly parallel(劫財).",
+      "Goat": "The Goat,Wei(未) contains yin earth, yin fire and stores yin wood. Yin earth, Ji (己) is unfriendly parallel(劫財). Yin fire, Ding (丁) is proper resource (正印).Yin wood, Yi (乙) is proper power (正官).",
+      "Monkey": "The Monkey, Shen (申) contains yang metal, yang water and yang earth. Yang metal, Geng (庚) is gracious output (食神).Yang water, Ren (壬) is unbecoming wealth (偏財).Yang earth, Wu (戊) is friendly parallel (比肩).",
+      "Rooster": "The Rooster, You (酉) contains yin metal.Yin metal, Xin (辛) is drastic output (傷官).",
+      "Dog": "The Dog, Xu (戌) contains yang earth, yin metal and stores yin fire.Yang earth, Wu (戊) is friendly parallel (比肩).Yin metal, Xin (辛) is drastic output (傷官).Yin fire, Ding (丁) is proper resource (正印).",
+      "Pig": "The Pig, Hai (亥) contains yang water and yang wood.Yang water, Ren (壬) is unbecoming wealth (偏財).Yang wood, Jia (甲) is unbecoming power (七殺)."
+    }
+  },
+
+  "Ji": {
+    "DS": "The daymaster (日主) is Ji (己)yin earth. The daymaster represents the spirit of the person in the four pillars chart.A yin earth personality tends to be caring and good at understanding others, patient and thoughtful.",
+    "HS": {
+      "Wood": [ "is the power spirit (官) and represents ambition and authority.", "is proper power (正官).", "is unbecoming power (七殺)." ],
+      "Water": [ "is the wealth spirit (財)and represents money and assets.", "is proper wealth (正財).", "is unbecoming wealth (偏財)." ],
+      "Metal": [ "is the output spirit (食傷)and represents performance and creativity.", "is drastic output (傷官).", "is gracious output (食神)." ],
+      "Earth": [ "is the parallel spirit (比劫) and represents friends and competitors in your chart.", "is unfriendly parallel(劫財).", "is friendly parallel (比肩)." ],
+      "Fire": [ "is the resource spirit (印) and represents parents and mentors.", "is proper resource (正印).", "is unbecoming resource (偏印)." ]
+    },
+    "BR": {
+      "Rat": "The Rat, Zi (子) contains yin water.Yin water, Gui (癸) is unbecoming wealth (偏財).",
+      "Ox": "The Ox, Chou (丑) contains yin earth and yin water, and stores yin metal.Yin earth, Ji (己) is friendly parallel (比肩).Yin water, Gui (癸) is unbecoming wealth (偏財).Yin metal, Xin (辛) is gracious output (食神).",
+      "Tiger": "The Tiger, Yin (寅) contains yang wood, yang fire and yang earth.Yang wood, Jia (甲) is proper power (正官).Yang fire, Bing (丙) is proper resource (正印).Yang earth, Wu (戊) is unfriendly parallel(劫財).",
+      "Rabbit": "The Rabbit, Mao (卯) contains yin wood.Yin wood, Yi (乙) is unbecoming power (七殺).",
+      "Dragon": "The Dragon, Chen (辰) contains yang earth, yin wood and stores yin water.Yang earth, Wu (戊) is unfriendly parallel(劫財). Yin wood, Yi (乙) is unbecoming power (七殺).Yin water, Gui (癸) is unbecoming wealth (偏財).",
+      "Snake": "The Snake, Si (巳) contains yang fire, yang earth and yang metal.Yang fire, Bing (丙) is proper resource (正印).Yang earth, Wu (戊) is unfriendly parallel(劫財). Yang metal, Geng (庚) is drastic output (傷官).",
+      "Horse": "The Horse,Wu (午) contains yin fire and yin earth.Yin fire, Ding (丁) is unbecoming resource (偏印).Yin earth, Ji (己) is friendly parallel (比肩).",
+      "Goat": "The Goat,Wei(未) contains yin earth, yin fire and stores yin wood. Yin earth, Ji (己) is friendly parallel (比肩).Yin fire, Ding (丁) is unbecoming resource (偏印).Yin wood, Yi (乙) is unbecoming power (七殺).",
+      "Monkey": "The Monkey, Shen (申) contains yang metal, yang water and yang earth.Yang metal, Geng (庚) is drastic output (傷官).Yang water, Ren (壬) is proper wealth (正財).Yang earth, Wu (戊) is unfriendly parallel(劫財).",
+      "Rooster": "The Rooster, You (酉) contains yin metal.Yin metal, Xin (辛) is gracious output (食神).",
+      "Dog": "The Dog, Xu (戌) contains yang earth, yin metal and stores yin fire.Yang earth, Wu (戊) is unfriendly parallel(劫財).Yin metal, Xin (辛) is gracious output (食神).Yin fire, Ding (丁) is unbecoming resource (偏印).",
+      "Pig": "The Pig, Hai (亥) contains yang water and yang wood.Yang water, Ren (壬) is proper wealth (正財).Yang wood, Jia (甲) is proper power (正官)."
+    }
+  },
+
+  "Geng": {
+    "DS": "The daymaster (日主) is Geng (庚)yang metal. The daymaster represents the spirit of the person in the four pillars chart. A yang metal personality tends to have a lot of willpower, and believes in setting high standards.",
+    "HS": {
+      "Wood": [ "is the wealth spirit (財)and represents money and assets.", "is unbecoming wealth (偏財).", "is proper wealth (正財)." ],
+      "Water": [ "is the output spirit (食傷)and represents performance and creativity.", "is gracious output (食神).", "is drastic output (傷官)." ],
+      "Metal": [ "is the parallel spirit (比劫) and represents friends and competitors in your chart.", "is friendly parallel (比肩).", "is unfriendly parallel(劫財)." ],
+      "Earth": [ "is the resource spirit (印) and represents parents and mentors.", "is unbecoming resource (偏印).", "is proper resource (正印)." ],
+      "Fire": [ "is the power spirit (官) and represents ambition and authority.", "is unbecoming power (七殺).", "is proper power (正官)." ]
+    },
+    "BR": {
+      "Rat": "The Rat, Zi (子) contains yin water.Yin water, Gui (癸) is drastic output (傷官).",
+      "Ox": "The Ox, Chou (丑) contains yin earth and yin water, and stores yin metal.Yin earth, Ji (己) is proper resource (正印).Yin water, Gui (癸) is drastic output (傷官).Yin metal, Xin (辛) is unfriendly parallel(劫財).",
+      "Tiger": "The Tiger, Yin (寅) contains yang wood, yang fire and yang earth.Yang wood, Jia (甲) is unbecoming wealth (偏財).Yang fire, Bing (丙) is unbecoming power (七殺).Yang earth, Wu (戊) is unbecoming resource (偏印).",
+      "Rabbit": "The Rabbit, Mao (卯) contains yin wood.Yin wood, Yi (乙) is proper wealth (正財).",
+      "Dragon": "The Dragon, Chen (辰) contains yang earth, yin wood and stores yin water.Yang earth, Wu (戊) is unbecoming resource (偏印).Yin wood, Yi (乙) is proper wealth (正財).Yin water, Gui (癸) is drastic output (傷官).",
+      "Snake": "The Snake, Si (巳) contains yang fire, yang earth and yang metal.Yang fire, Bing (丙) is unbecoming power (七殺).Yang earth, Wu (戊) is unbecoming resource (偏印).Yang metal, Geng (庚) is friendly parallel (比肩).",
+      "Horse": "The Horse,Wu (午) contains yin fire and yin earth.Yin fire, Ding (丁) is proper power (正官).Yin earth, Ji (己) is proper resource (正印).",
+      "Goat": "The Goat,Wei(未) contains yin earth, yin fire and stores yin wood. Yin earth, Ji (己) is proper resource (正印).Yin fire, Ding (丁) is proper power (正官).Yin wood, Yi (乙) is proper wealth (正財).",
+      "Monkey": "The Monkey, Shen (申) contains yang metal, yang water and yang earth. Yang metal, Geng (庚) is friendly parallel (比肩).Yang water, Ren (壬) is gracious output (食神).Yang earth, Wu (戊) is unbecoming resource (偏印).",
+      "Rooster": "The Rooster, You (酉) contains yin metal.Yin metal, Xin (辛) is unfriendly parallel(劫財).",
+      "Dog": "The Dog, Xu (戌) contains yang earth, yin metal and stores yin fire.Yang earth, Wu (戊) is unbecoming resource (偏印).Yin metal, Xin (辛) is unfriendly parallel(劫財).Yin fire, Ding (丁) is proper power (正官).",
+      "Pig": "The Pig, Hai (亥) contains yang water and yang wood.Yang water, Ren (壬) is gracious output (食神).Yang wood, Jia (甲) is unbecoming wealth (偏財)."
+    }
+  },
+
+  "Xin": {
+    "DS": "The daymaster (日主) is Xin (辛)yin metal. The daymaster represents the spirit of the person in the four pillars chart.A yin metal personality has a tendency to analyse situations and people in a lot of detail, and can be highly focused on achieving goals.",
+    "HS": {
+      "Wood": [ "is the wealth spirit (財)and represents money and assets.", "is proper wealth (正財).", "is unbecoming wealth (偏財)." ],
+      "Water": [ "is the output spirit (食傷)and represents performance and creativity.", "is drastic output (傷官).", "is gracious output (食神)." ],
+      "Metal": [ "is the parallel spirit (比劫) and represents friends and competitors in your chart.", "is unfriendly parallel(劫財).", "is friendly parallel (比肩)." ],
+      "Earth": [ "is the resource spirit (印) and represents parents and mentors.", "is proper resource (正印).", "is unbecoming resource (偏印)." ],
+      "Fire": [ "is the power spirit (官) and represents ambition and authority.", "is proper power (正官).", "is unbecoming power (七殺)." ]
+    },
+    "BR": {
+      "Rat": "The Rat, Zi (子) contains yin water.Yin water, Gui (癸) is gracious output (食神).",
+      "Ox": "The Ox, Chou (丑) contains yin earth and yin water, and stores yin metal.Yin earth, Ji (己) is unbecoming resource (偏印).Yin water, Gui (癸) is gracious output (食神).Yin metal, Xin (辛) is friendly parallel (比肩).",
+      "Tiger": "The Tiger, Yin (寅) contains yang wood, yang fire and yang earth.Yang wood, Jia (甲) is proper wealth (正財).Yang fire, Bing (丙) is proper power (正官).Yang earth, Wu (戊) is proper resource (正印).",
+      "Rabbit": "The Rabbit, Mao (卯) contains yin wood.Yin wood, Yi (乙) is unbecoming wealth (偏財).",
+      "Dragon": "The Dragon, Chen (辰) contains yang earth, yin wood and stores yin water.Yang earth, Wu (戊) is proper resource (正印).Yin wood, Yi (乙) is unbecoming wealth (偏財).Yin water, Gui (癸) is gracious output (食神).",
+      "Snake": "The Snake, Si (巳) contains yang fire, yang earth and yang metal.Yang fire, Bing (丙) is proper power (正官).Yang earth, Wu (戊) is proper resource (正印).Yang metal, Geng (庚) is unfriendly parallel(劫財).",
+      "Horse": "The Horse,Wu (午) contains yin fire and yin earth.Yin fire, Ding (丁) is unbecoming power (七殺).Yin earth, Ji (己) is unbecoming resource (偏印).",
+      "Goat": "The Goat,Wei(未) contains yin earth, yin fire and stores yin wood. Yin earth, Ji (己) is unbecoming resource (偏印).Yin fire, Ding (丁) is unbecoming power (七殺).Yin wood, Yi (乙) is unbecoming wealth (偏財).",
+      "Monkey": "The Monkey, Shen (申) contains yang metal, yang water and yang earth. Yang metal, Geng (庚) is unfriendly parallel(劫財). Yang water, Ren (壬) is drastic output (傷官).Yang earth, Wu (戊) is proper resource (正印).",
+      "Rooster": "The Rooster, You (酉) contains yin metal.Yin metal, Xin (辛) is friendly parallel (比肩).",
+      "Dog": "The Dog, Xu (戌) contains yang earth, yin metal and stores yin fire.Yang earth, Wu (戊) is proper resource (正印).Yin metal, Xin (辛) is friendly parallel (比肩).Yin fire, Ding (丁) is unbecoming power (七殺).",
+      "Pig": "The Pig, Hai (亥) contains yang water and yang wood.Yang water, Ren (壬) is drastic output (傷官).Yang wood, Jia (甲) is proper wealth (正財)."
+    }
+  },
+
+  "Ren": {
+    "DS": "The daymaster (日主) is Ren (壬)yang water. The daymaster represents the spirit of the person in the four pillars chart.A yang water personality tends to be philosophical and imaginative, likes to explore dreams and ideas in depth.",
+    "HS": {
+      "Wood": [ "is the output spirit (食傷)and represents performance and creativity.", "is gracious output (食神).", "is drastic output (傷官)." ],
+      "Water": [ "is the parallel spirit (比劫) and represents friends and competitors in your chart.", "is friendly parallel (比肩).", "is unfriendly parallel(劫財)." ],
+      "Metal": [ "is the resource spirit (印) and represents parents and mentors.", "is unbecoming resource (偏印).", "is proper resource (正印)." ],
+      "Earth": [ "is the power spirit (官) and represents ambition and authority.", "is unbecoming power (七殺).", "is proper power (正官)." ],
+      "Fire": [ "is the wealth spirit (財)and represents money and assets.", "is unbecoming wealth (偏財).", "is proper wealth (正財)." ]
+    },
+    "BR": {
+      "Rat": "The Rat, Zi (子) contains yin water.Yin water, Gui (癸) is unfriendly parallel(劫財).",
+      "Ox": "The Ox, Chou (丑) contains yin earth and yin water, and stores yin metal.Yin earth, Ji (己) is proper power (正官).Yin water, Gui (癸) is unfriendly parallel(劫財). Yin metal, Xin (辛) is proper resource (正印).",
+      "Tiger": "The Tiger, Yin (寅) contains yang wood, yang fire and yang earth.Yang wood, Jia (甲) is gracious output (食神).Yang fire, Bing (丙) is unbecoming wealth (偏財).Yang earth, Wu (戊) is unbecoming power (七殺).",
+      "Rabbit": "The Rabbit, Mao (卯) contains yin wood.Yin wood, Yi (乙) is drastic output (傷官).",
+      "Dragon": "The Dragon, Chen (辰) contains yang earth, yin wood and stores yin water.Yang earth, Wu (戊) is unbecoming power (七殺).Yin wood, Yi (乙) is drastic output (傷官).Yin water, Gui (癸) is unfriendly parallel(劫財).",
+      "Snake": "The Snake, Si (巳) contains yang fire, yang earth and yang metal.Yang fire, Bing (丙) is unbecoming wealth (偏財).Yang earth, Wu (戊) is unbecoming power (七殺).Yang metal, Geng (庚) is unbecoming resource (偏印).",
+      "Horse": "The Horse,Wu (午) contains yin fire and yin earth.Yin fire, Ding (丁) is proper wealth (正財).Yin earth, Ji (己) is proper power (正官).",
+      "Goat": "The Goat,Wei(未) contains yin earth, yin fire and stores yin wood. Yin earth, Ji (己) is proper power (正官).Yin fire, Ding (丁) is proper wealth (正財).Yin wood, Yi (乙) is drastic output (傷官).",
+      "Monkey": "The Monkey, Shen (申) contains yang metal, yang water and yang earth. Yang metal, Geng (庚) is unbecoming resource (偏印).Yang water, Ren (壬) is friendly parallel (比肩).Yang earth, Wu (戊) is unbecoming power (七殺).",
+      "Rooster": "The Rooster, You (酉) contains yin metal.Yin metal, Xin (辛) is proper resource (正印).",
+      "Dog": "The Dog, Xu (戌) contains yang earth, yin metal and stores yin fire.Yang earth, Wu (戊) is unbecoming power (七殺).Yin metal, Xin (辛) is proper resource (正印).Yin fire, Ding (丁) is proper wealth (正財).",
+      "Pig": "The Pig, Hai (亥) contains yang water and yang wood.Yang water, Ren (壬) is friendly parallel (比肩).Yang wood, Jia (甲) is gracious output (食神)."
+    }
+  },
+
+  "Gui": {
+    "DS": "The daymaster (日主) is Gui (癸)yin water. The daymaster represents the spirit of the person in the four pillars chart.A yin water personailty is usually inituitive and full of insights, curious and likes to find answers.",
+    "HS": {
+      "Wood": [ "is the output spirit (食傷)and represents performance and creativity.","is drastic output (傷官).","is gracious output (食神)." ],
+      "Water": [ "is the parallel spirit (比劫) and represents friends and competitors in your chart.","is unfriendly parallel(劫財).","is friendly parallel (比肩)." ],
+      "Metal": [ "is the resource spirit (印) and represents parents and mentors.","is proper resource (正印).","is unbecoming resource (偏印)." ],
+      "Earth": [ "is the power spirit (官) and represents ambition and authority.","is proper power (正官).","is unbecoming power (七殺)." ],
+      "Fire": [ "is the wealth spirit (財)and represents money and assets.","is proper wealth (正財).","is unbecoming wealth (偏財)." ]
+    },
+    "BR": {
+      "Rat": "The Rat, Zi (子) contains yin water.Yin water, Gui (癸) is friendly parallel (比肩).",
+      "Ox": "The Ox, Chou (丑) contains yin earth and yin water, and stores yin metal.Yin earth, Ji (己) is unbecoming power (七殺).Yin water, Gui (癸) is friendly parallel (比肩).Yin metal, Xin (辛) is unbecoming resource (偏印).",
+      "Tiger": "The Tiger, Yin (寅) contains yang wood, yang fire and yang earth.Yang wood, Jia (甲) is drastic output (傷官).Yang fire, Bing (丙) is proper wealth (正財).Yang earth, Wu (戊) is proper power (正官).",
+      "Rabbit": "The Rabbit, Mao (卯) contains yin wood.Yin wood, Yi (乙) is gracious output (食神).",
+      "Dragon": "The Dragon, Chen (辰) contains yang earth, yin wood and stores yin water.Yang earth, Wu (戊) is proper power (正官).Yin wood, Yi (乙) is gracious output (食神).Yin water, Gui (癸) is friendly parallel (比肩).",
+      "Snake": "The Snake, Si (巳) contains yang fire, yang earth and yang metal.Yang fire, Bing (丙) is proper wealth (正財).Yang earth, Wu (戊) is proper power (正官).Yang metal, Geng (庚) is proper resource (正印).",
+      "Horse": "The Horse,Wu (午) contains yin fire and yin earth.Yin fire, Ding (丁) is unbecoming wealth (偏財).Yin earth, Ji (己) is unbecoming power (七殺).",
+      "Goat": "The Goat,Wei(未) contains yin earth, yin fire and stores yin wood.Yin earth, Ji (己) is unbecoming power (七殺).Yin fire, Ding (丁) is unbecoming wealth (偏財).Yin wood, Yi (乙) is gracious output (食神).",
+      "Monkey": "The Monkey, Shen (申) contains yang metal, yang water and yang earth.Yang metal, Geng (庚) is proper resource (正印).Yang water, Ren (壬) is unfriendly parallel(劫財).Yang earth, Wu (戊) is proper power (正官).",
+      "Rooster": "The Rooster, You (酉) contains yin metal.Yin metal, Xin (辛) is unbecoming resource (偏印).",
+      "Dog": "The Dog, Xu (戌) contains yang earth, yin metal and stores yin fire.Yang earth, Wu (戊) is proper power (正官).Yin metal, Xin (辛) is unbecoming resource (偏印).Yin fire, Ding (丁) is unbecoming wealth (偏財).",
+      "Pig": "The Pig, Hai (亥) contains yang water and yang wood.Yang water, Ren (壬) is unfriendly parallel(劫財). Yang wood, Jia (甲) is drastic output (傷官)."
+    }
+  }
+}

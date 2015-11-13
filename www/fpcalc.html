@@ -1,0 +1,350 @@
+<link rel="stylesheet" href="css/app.css" />
+
+
+<ons-page modifier="fpcalc" ng-init="init();" ng-controller="fpcalcCtrl" on-device-backbutton="app.gotoPage('home');">
+  <ons-toolbar fixed-style>
+    <div class="center">Four Pillars Calculator</div>
+  </ons-toolbar>
+  <ons-list>
+    <ons-list-item>
+      <ons-row>
+        <ons-col width="80px">
+          <span>Name: </span>
+        </ons-col>
+        <ons-col>
+          <input id="recordName" type="url" class="text-input text-input--underbar" style="float:right; margin-top: 6px; margin-right: 16px; width: 100%"/>
+        </ons-col>
+      </ons-row>
+    </ons-list-item>
+      
+
+      <div class="lucent" style="margin: 10px;">When online select birth place from map or from current position to get timezone and longitude. Change Timezone if a different one was in use on birth date.</div>
+      <ons-list-item style="margin-top: 15px; margin-bottom: 15px;">
+          <ons-button modifier="large" ng-click="showMap();">Select from map</ons-button>
+      </ons-list-item>
+      <ons-list-item style="margin-top: 15px; margin-bottom: 15px;">
+          <ons-button modifier="large" ng-click="setFromCurrentPos();">Set from current position</ons-button>
+      </ons-list-item>
+      <!--
+      <ons-list-item ng-click="">
+          <ons-row>
+              <ons-col>
+                  Longitude : <span id="lng"></span><br />
+                  Latitude : <span id="lat"></span>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+      -->
+    <ons-list-item ng-click="chooseTimezone();">
+      <ons-row>
+        <ons-col width="120px">
+          <span>Timezone: </span>
+        </ons-col>
+        <ons-col>
+          <div style="float:right; padding-right: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; text-align: right;">
+            <!--{{timezone}}-->
+            <select style="width:100%" id="timezone"></select>
+          </div>
+        </ons-col>
+      </ons-row>
+    </ons-list-item>
+
+
+    <ons-list-item>
+      <ons-row>
+        <ons-col style="max-width:120px !important">
+          <span style="line-height: 2em;">Longitude:</span>
+        </ons-col>
+        <ons-col>
+          <div style="padding-right: 30px;">
+              <!--
+            <span id="longi_we" ng-click="toggleLongiWE();">
+              <i class="fa fa-plus fa-border fa-lg" ></i>
+              <i class="fa fa-minus fa-border fa-lg" ></i>
+            </span>
+                  -->
+            <!--<input ng-model="longi" type="number" min="-181" max="181" step="0.1" id ="longitude" class="text-input--underbar" style="margin-top: 6px;">-->
+              <input id="lng" type="tel" min="-181" max="181" step="0.1" class="text-input--underbar" style="width:100%">
+          </div>
+        </ons-col>
+      </ons-row>
+    </ons-list-item>
+<!--
+    <div class="lucent" style="margin: 10px;">If there was Daylight Savings Time on birth date, deduct one hour from the clock time to get Standard Local Time then input.</div>
+-->
+    <!--<ons-list-item modifier="chevron" ng-click="chooseDateTime('date');">-->
+      <ons-list-item ng-click="chooseDateTime('date');">
+          <ons-row>
+              <ons-col width="50%">
+                  <span>Birth Date:</span>
+              </ons-col>
+              <ons-col>
+
+                  <input style="width:100%" name="datepicker" id="datepicker" type="text" data-role="datebox" data-options='{"mode":"datebox", "useNewStyle":true}' />
+
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+    <!--<ons-list-item modifier="chevron" ng-click="chooseDateTime('time');">-->
+      <ons-list-item ng-click="chooseDateTime('time');">
+          <ons-row>
+              <ons-col width="50%">
+                  <span>Birth Time: </span>
+              </ons-col>
+              <ons-col>
+
+                  <input style="width:100%" name="timepicker" id="timepicker" type="text" data-role="datebox" data-options='{"mode":"timeflipbox", "useNewStyle":true}' />
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+      <ons-list-item ng-click="">
+          <ons-row>
+              <ons-col style="margin-top:10px">
+                  <label class="checkbox">
+                      <input type="checkbox" value="0" ng-model="dst">
+                      <div class="checkbox__checkmark"></div>
+                      <span class="ons-checkbox-inner"></span>
+                      Daylight Saving Time in use
+                  </label>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+
+          <ons-list-item>
+              <ons-row>
+                  <ons-col width="70px">
+                      <span>Gender:</span>
+                  </ons-col>
+                  <ons-col>
+                      <div style="float: right; padding-right: 25px;">
+                          <label class="radio-button" style="margin-right: 20px;">
+                              <input type="radio" value="1" ng-model="BBB">
+                              <div class="radio-button__checkmark"></div>
+                              Male
+                          </label>
+
+                          <label class="radio-button">
+                              <input type="radio" value="-1" ng-model="BBB">
+                              <div class="radio-button__checkmark"></div>
+                              Female
+                          </label>
+                      </div>
+
+                  </ons-col>
+              </ons-row>
+          </ons-list-item>
+
+
+      <ons-list-item>
+          <ons-row>
+            <ons-col>
+                 <div style="padding:3px">
+                     <ons-button style="width:100%" ng-click="onOpen(0);" modifier="large">Open</ons-button>
+                 </div>
+            </ons-col>
+              <ons-col>
+                  <div style="padding:3px">
+                      <ons-button style="width:100%" ng-click="onOpen(1);" modifier="large">Save</ons-button>
+                  </div>
+              </ons-col>
+              <ons-col>
+                  <div style="padding:3px">
+                      <ons-button style="width:100%" ng-click="onOpen(2);" modifier="large">Delete</ons-button>
+                  </div>
+              </ons-col>
+          </ons-row>
+      </ons-list-item>
+      <p style="font-size:12px; margin:5px">Tap Compute again after Open or Save.</p>
+    <ons-list-item style="margin-bottom: 15px;">
+        <ons-button modifier="large" ng-click="compute();">Compute</ons-button>
+    </ons-list-item>
+
+</ons-list>
+
+  <div class="result">
+    <h2>Four Pillars</h2>
+    <ons-row class="header" style="margin-bottom: 10px;">
+      <ons-col>Hour</ons-col>
+      <ons-col>Day</ons-col>
+      <ons-col>Month</ons-col>
+      <ons-col>Year</ons-col>
+    </ons-row>
+    <ons-row class="body">
+      <ons-col>
+        <div class="big-part purple-shadow">
+          <fp-big-gonji data="{{ret.hs}}"></fp-big-gonji>
+          <fp-big-gonji data="{{ret.hb}}" nosign></fp-big-gonji>
+        </div>
+        <div class="small-part">
+          <fp-small-gonji data="{{ret.hs1}}"></fp-small-gonji>
+          <fp-small-gonji data="{{ret.hs2}}"></fp-small-gonji>
+          <fp-small-gonji data="{{ret.hs3}}"></fp-small-gonji>
+        </div>
+      </ons-col>
+      <ons-col>
+        <div class="big-part purple-shadow">
+          <fp-big-gonji data="{{ret.ds}}"></fp-big-gonji>
+          <fp-big-gonji data="{{ret.db}}" nosign></fp-big-gonji>
+        </div>
+        <div class="small-part">
+          <fp-small-gonji data="{{ret.ds1}}"></fp-small-gonji>
+          <fp-small-gonji data="{{ret.ds2}}"></fp-small-gonji>
+          <fp-small-gonji data="{{ret.ds3}}"></fp-small-gonji>
+        </div>
+      </ons-col>
+      <ons-col>
+        <div class="big-part purple-shadow">
+          <fp-big-gonji data="{{ret.ms}}"></fp-big-gonji>
+          <fp-big-gonji data="{{ret.mb}}" nosign></fp-big-gonji>
+        </div>
+        <div class="small-part">
+          <fp-small-gonji data="{{ret.ms1}}"></fp-small-gonji>
+          <fp-small-gonji data="{{ret.ms2}}"></fp-small-gonji>
+          <fp-small-gonji data="{{ret.ms3}}"></fp-small-gonji>
+        </div>
+      </ons-col>
+      <ons-col>
+        <div class="big-part purple-shadow">
+          <fp-big-gonji data="{{ret.ys}}"></fp-big-gonji>
+          <fp-big-gonji data="{{ret.yb}}" nosign></fp-big-gonji>
+        </div>
+        <div class="small-part">
+          <fp-small-gonji data="{{ret.ys1}}"></fp-small-gonji>
+          <fp-small-gonji data="{{ret.ys2}}"></fp-small-gonji>
+          <fp-small-gonji data="{{ret.ys3}}"></fp-small-gonji>
+        </div>
+      </ons-col>
+    </ons-row>
+
+      <p ng-click="gotoGetReading(ret.dn);" style="font-size: 1.3em; text-align: center; font-weight: bold;">
+          Solar time  {{ret.solar_birth}}
+      </p>
+
+    <br/>
+    <br/>
+
+    <h2>Chinese Destiny Stars Astrology</h2>
+    <div style="text-align: left; text-indent: 5px;">1. To get your free Year Star reading tap the Year Star icon on menu bar below.</div>
+    
+    <p ng-click="gotoGetReading(ret.dn);" style="font-size: 1.3em; text-align: center; font-weight: bold;">
+      Your Destiny Numeral is:
+      <br/>
+      <span style="font-size:1.5em; color: green;">{{ret.dn}}</span>
+    </p>
+      
+    <p style="font-size: 1.3em; text-align: center; font-weight: bold;">
+      Your Hour Pillar is:
+      <br/>
+      <span style="color: blue;">{{ret.hs | cdsa:'type'}} {{ret.hb | cdsa:'type'}}</span>
+    </p>
+
+    <div style="text-align: left; text-indent: 5px;">
+      2. Your Hour Star reading is found inside the Destiny Numeral Life Reading. There are three Hour Star names inside each numeral.
+      You need to know your Hour Pillar to find the name of your Hour Star, metaphor and explanation.
+      Make a note of your Hour Pillar, above in blue, and look for it under each of the three star names at the start of the Destiny Numeral Life Reading.
+    </div>
+    <div style="text-align: left; text-indent: 5px;">
+      3. Tap on the Destiny Numeral, above in green, or the Life Reading icon on the menu bar to access the Destiny Numeral Life Reading with the Hour Stars (in-app purchase).
+    </div>
+
+
+    <br/>
+
+    <h2>Eight Luck Pillars</h2>
+    <h4>Luck pillars are from right to left with starting age.</h4>
+    <ons-row class="body" style="margin-bottom: 1em;">
+      <ons-col>
+        <div class="big-part">
+          <div class="scalar">{{ret.lp4 | number: 2}}</div>
+          <fp-big-gonji data="{{ret.lps4}}"></fp-big-gonji>
+          <fp-big-gonji data="{{ret.lpb4}}" nosign></fp-big-gonji>
+        </div>
+      </ons-col>
+      <ons-col>
+        <div class="big-part">
+          <div class="scalar">{{ret.lp3 | number: 2}}</div>
+          <fp-big-gonji data="{{ret.lps3}}"></fp-big-gonji>
+          <fp-big-gonji data="{{ret.lpb3}}" nosign></fp-big-gonji>
+        </div>
+      </ons-col>
+      <ons-col>
+        <div class="big-part">
+          <div class="scalar">{{ret.lp2 | number: 2}}</div>
+          <fp-big-gonji data="{{ret.lps2}}"></fp-big-gonji>
+          <fp-big-gonji data="{{ret.lpb2}}" nosign></fp-big-gonji>
+        </div>
+      </ons-col>
+      <ons-col>
+        <div class="big-part">
+          <div class="scalar">{{ret.lp1 | number: 2}}</div>
+          <fp-big-gonji data="{{ret.lps1}}"></fp-big-gonji>
+          <fp-big-gonji data="{{ret.lpb1}}" nosign></fp-big-gonji>
+        </div>
+      </ons-col>
+    </ons-row>
+    <ons-row class="body" style="margin-bottom: 1em;">
+      <ons-col>
+        <div class="big-part">
+          <div class="scalar">{{ret.lp8 | number: 2}}</div>
+          <fp-big-gonji data="{{ret.lps8}}"></fp-big-gonji>
+          <fp-big-gonji data="{{ret.lpb8}}" nosign></fp-big-gonji>
+        </div>
+      </ons-col>
+      <ons-col>
+        <div class="big-part">
+          <div class="scalar">{{ret.lp7 | number: 2}}</div>
+          <fp-big-gonji data="{{ret.lps7}}"></fp-big-gonji>
+          <fp-big-gonji data="{{ret.lpb7}}" nosign></fp-big-gonji>
+        </div>
+      </ons-col>
+      <ons-col>
+        <div class="big-part">
+          <div class="scalar">{{ret.lp6 | number: 2}}</div>
+          <fp-big-gonji data="{{ret.lps6}}"></fp-big-gonji>
+          <fp-big-gonji data="{{ret.lpb6}}" nosign></fp-big-gonji>
+        </div>
+      </ons-col>
+      <ons-col>
+        <div class="big-part">
+          <div class="scalar">{{ret.lp5 | number: 2}}</div>
+          <fp-big-gonji data="{{ret.lps5}}"></fp-big-gonji>
+          <fp-big-gonji data="{{ret.lpb5}}" nosign></fp-big-gonji>
+        </div>
+      </ons-col>
+    </ons-row>
+      <ons-list-item style="margin-bottom: 15px;">
+          <ons-button modifier="large" ng-click="gotoPage('analyse');" ng-show="ret.calculated">Analyse Chart</ons-button>
+      </ons-list-item>
+  </div>
+
+  <ons-bottom-toolbar>
+    <ons-row>
+
+      <ons-col class="action-col" ng-click="gotoYearStar();">
+        <div class="action-icon"><ons-icon icon="ion-star"></ons-icon></div>
+        <div class="action-label">Your Year Star</div>
+      </ons-col>
+
+      <ons-col class="action-col" ng-click="gotoPage('unlockreadings');">
+        <div class="action-icon"><ons-icon icon="fa fa-book"></ons-icon></div>
+        <div class="action-label">Get life reading</div>
+      </ons-col>
+
+      <ons-col class="action-col" ng-click="gotoPage('home');">
+        <div class="action-icon"><ons-icon icon="ion-home"></ons-icon></div>
+        <div class="action-label">Home</div>
+      </ons-col>
+
+    </ons-row>
+  </ons-bottom-toolbar>
+    <div class="blackScreen">
+        <div class="loadingWheelWrapper">
+            <span class='waitforsec'>
+                Fetching timezone, please wait for seconds...
+            </span><br>
+            <!--<img src="img/ajax-loader.gif"/>-->
+        </div>
+    </div>
+</ons-page>
+
