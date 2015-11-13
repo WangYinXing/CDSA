@@ -504,3 +504,12 @@ select, input {
 table {
     border-collapse: collapse;
 }
+
+
+.version {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 1em;
+  color: white;
+}

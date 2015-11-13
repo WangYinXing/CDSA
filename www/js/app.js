@@ -1,13 +1,20 @@
 (function(){
   'use strict';
 
-  var module = angular.module('app', ['onsen', 'config', 'cdsaDirectives', 'cdsaServices', 'cdsaFilters']);
+    var module = angular.module('app', ['ionic', 'onsen', 'config', 'cdsaDirectives', 'cdsaServices', 'cdsaFilters']);
     var xmlHttp = new XMLHttpRequest();
 
     module.service('gApp', function() {
         this.fp_result = {};
         this.json = {};
     });
+
+    module.run(['$rootScope', '$ionicPlatform', function($rootScope, $ionicPlatform) {
+
+      $ionicPlatform.ready(function() {
+         
+      });
+    }]);
 
     module.controller('appCtrl', ['$scope', '$sce', '$http', 'gApp', function($scope, $sce, $http, gApp) {
       app.gotoPage = gApp.gotoPage = function(page) {
@@ -135,7 +142,20 @@
 
     $scope.gotoPage = gApp.gotoPage;
 
+    $scope.init = function() {
+      if (typeof(cordova) != "undefined") {
+        try {
+          cordova.getAppVersion.getVersionNumber().then(function (version) {
+            $scope.$apply(function() {
+              $scope.version = version;
+            })
+          });
+        }
+        catch(e) {
 
+        }
+      }
+    };
 
     function onSuccess() {
       console.log('Sharing successed !');

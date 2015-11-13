@@ -56,6 +56,9 @@
     <script src="lib/owlcarousel/owl.carousel.js"></script>
     <script src="lib/slick/slick.js"></script>
 
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
     <script src="lib/onsen/js/onsenui.js"></script>
 
 <!--###############################################################################################################################
@@ -131,6 +134,9 @@
         });
 
         function initPushwooshForWindows() {
+            if (typeof(cordova) == "undefined")
+                return;
+            
             var pushNotification = cordova.require("com.pushwoosh.plugins.pushwoosh.PushNotification");
 
             //set push notifications handler

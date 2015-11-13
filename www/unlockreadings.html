@@ -1,4 +1,4 @@
-<ons-page modifier="unlockreadings" ng-controller="unlockreadingsCtrl" on-device-backbutton="app.gotoPage('home');">
+<ons-page modifier="unlockreadings" ng-controller="unlockreadingsCtrl" ng-init="init();" on-device-backbutton="app.gotoPage('home');">
   <br>
   <div class='description'>
     
@@ -28,14 +28,23 @@
                ng-class="{highlight: isRightDN( i * 10 + j )}"
                class='locked'>
         <div>{{i * 10 + j + 1}}</div>
-        <ons-icon class="prod-state icon_{{i * 10 + j }} locked" spin='true' icon="ion-load-d"></ons-icon>
+        <ons-icon class="prod-state icon_{{i * 10 + j }} locked" icon="ion-load-d"></ons-icon>
       </ons-col>
     </ons-row>
   </div>
+  <div class="prodpending">
+
+    <div class="loadingWheelWrapper">
+      <span class='waitforsec'>Sending request to app store.<br>
+      It will take a few seconds....</span><br>
+      <!--<img src="img/ajax-loader.gif"/>-->
+    </div>
+  </div>
+  
   <div class="blackScreen">
 
     <div class="loadingWheelWrapper">
-      <span class='waitforsec'>Loading products from Windows store.<br>
+      <span class='waitforsec'>Loading products from store.<br>
       It will take a few seconds....</span><br>
       <!--<img src="img/ajax-loader.gif"/>-->
     </div>
