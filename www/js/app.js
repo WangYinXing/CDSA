@@ -1,11 +1,17 @@
 (function(){
   'use strict';
+    var deviceIsReady = false;
     var rootScope;
+
     var module = angular.module('app', ['onsen', 'config', 'cdsaDirectives', 'cdsaServices', 'cdsaFilters']);
     var xmlHttp = new XMLHttpRequest();
 
     document.addEventListener("deviceready", function() {
-      rootScope.$broadcast("device_ready");
+      deviceIsReady = true;
+
+      if (typeof(rootScope) != "undefined") {
+        rootScope.$broadcast("device_ready");
+      }
     }, false);
 
     module.service('gApp', function() {
@@ -14,7 +20,12 @@
     });
 
     module.run(['$rootScope', function($rootScope) {
-      rootScope = $rootScope;
+      if (deviceIsReady) {
+        $rootScope.$broadcast("device_ready");
+      }
+      else {
+        rootScope = $rootScope;
+      }
     }]);
 
     module.controller('appCtrl', ['$scope', '$sce', '$http', 'gApp', function($scope, $sce, $http, gApp) {

@@ -21,21 +21,31 @@ app.controller('homeCtrl', ['$scope', '$window', 'gApp', function($scope, $windo
 
   $scope.init = function() {
     $scope.version = '';
+
+    var interval = setInterval( function() {
+      if (typeof(cordova) != "undefined") {
+        try {
+          cordova.getAppVersion.getVersionNumber().then(function (version) {
+            $scope.version = version;
+
+            cordova.getAppVersion.getVersionCode().then(function (code) {
+              $scope.$apply(function() {
+                $scope.version += " " + code;
+
+                clearInterval(interval);
+              })
+            });
+          });
+        }
+        catch(e) {
+
+        }
+      } 
+    }, 500);
   };
 
   $scope.$on("device_ready", function() {
-    if (typeof(cordova) != "undefined") {
-      try {
-        cordova.getAppVersion.getVersionNumber().then(function (version) {
-          $scope.$apply(function() {
-            $scope.version = version;
-          })
-        });
-      }
-      catch(e) {
-
-      }
-    }
+    
   });
 
   function onSuccess() {

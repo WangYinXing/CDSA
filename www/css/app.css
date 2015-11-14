@@ -511,6 +511,6 @@ table {
   top: 0px;
   right: 0px;
   padding: 1em;
-  color: white;
-  font-size:0.7em;
+  color: rgba(255,255,255,0.5);
+  font-size:0.6em;
 }

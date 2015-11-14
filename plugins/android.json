@@ -31,6 +31,9 @@
         },
         "uk.co.whiteoctober.cordova.appversion": {
             "PACKAGE_NAME": "com.fsrc.destinystars"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.fsrc.destinystars"
         }
     },
     "dependent_plugins": {}
