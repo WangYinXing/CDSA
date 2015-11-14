@@ -4,68 +4,7 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {
-            "AndroidManifest.xml": {
-                "parents": {
-                    "/manifest": [
-                        {
-                            "xml": "<uses-permission android:name=\"com.android.vending.BILLING\" />",
-                            "count": 1
-                        }
-                    ],
-                    "/*": [
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 1
-                        }
-                    ]
-                }
-            },
-            "res/xml/config.xml": {
-                "parents": {
-                    "/*": [
-                        {
-                            "xml": "<feature name=\"InAppBillingPlugin\"><param name=\"android-package\" value=\"com.smartmobilesoftware.inappbilling.InAppBillingPlugin\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"com.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"AppVersion\"><param name=\"android-package\" value=\"uk.co.whiteoctober.cordova.AppVersion\" /></feature>",
-                            "count": 1
-                        }
-                    ]
-                }
-            },
-            "res/values/billing_key_param.xml": {
-                "parents": {
-                    "/*": [
-                        {
-                            "xml": "<string name=\"billing_key_param\">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmJ8dHpxQReVueYsc8RBZAgXhL7pJJ8hrFv/RLCFXMvtOE1Db+tWBOvbOBlTYomkZ4IgG+ha9fbTkFXZSzERrxpDREhT1DtLiVZ8ptNugFTJOlX75eT7B6zjHnruP97LHP22sAAtNr4atrgGA0sRSlOrALIHCuqk7r1/pWey4oZoCTgUSVb9G56plBywR4Tjx50HYV6TcIQxl8SC4+gXtMO7bsG0qElg26bFUE/OWj6CWV9K0gp8Wy8X7iWnnqXZ/xc3MwPOhkriTvLddUhENCEGzNWc0olOWowdtu2C6DNfH3EXm5V2OpP3IISKAJmpzbfquFmMGjJy7T4SpCVkMQQIDAQAB</string>",
-                            "count": 1
-                        }
-                    ]
-                }
-            }
-        }
+        "files": {}
     },
     "installed_plugins": {
         "cc.fovea.cordova.purchase": {
