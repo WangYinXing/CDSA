@@ -1,5 +1,5 @@
 <ons-page modifier="home" ng-init="init();" ng-controller="homeCtrl" id="home-page">
-  <div class="version">{{version}}</div>
+  <div ng-hide="version == ''" class="version">V {{version}}</div>
 
   <div ons-if-orientation="portrait"><div class="cover-portrait"></div></div>
   <div ons-if-orientation="landscape"><div class="cover-landscape"></div></div>
