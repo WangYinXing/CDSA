@@ -33,6 +33,9 @@
         },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.fsrc.destinystars"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.fsrc.destinystars"
         }
     },
     "dependent_plugins": {}
