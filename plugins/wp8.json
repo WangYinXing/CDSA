@@ -1,0 +1,42 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cc.fovea.cordova.purchase": {
+            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+        },
+        "com.ionic.keyboard": {
+            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+        },
+        "uk.co.whiteoctober.cordova.appversion": {
+            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+        }
+    },
+    "dependent_plugins": {}
+}

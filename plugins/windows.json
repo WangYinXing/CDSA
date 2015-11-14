@@ -1,0 +1,42 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cc.fovea.cordova.purchase": {
+            "PACKAGE_NAME": "Chinese DestinyStars Astrology"
+        },
+        "com.ionic.keyboard": {
+            "PACKAGE_NAME": "Chinese DestinyStars Astrology"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "Chinese DestinyStars Astrology"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "Chinese DestinyStars Astrology"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "Chinese DestinyStars Astrology"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "Chinese DestinyStars Astrology"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "Chinese DestinyStars Astrology"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "Chinese DestinyStars Astrology"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "Chinese DestinyStars Astrology"
+        },
+        "uk.co.whiteoctober.cordova.appversion": {
+            "PACKAGE_NAME": "Chinese DestinyStars Astrology"
+        }
+    },
+    "dependent_plugins": {}
+}
