@@ -21,8 +21,6 @@ app.controller('homeCtrl', ['$scope', '$window', 'gApp', function($scope, $windo
 
   $scope.init = function() {
     $scope.version = '';
-
-    
   };
 
   $scope.$on("device_ready", function() {
