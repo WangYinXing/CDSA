@@ -515,3 +515,11 @@ table {
   color: rgba(255,255,255,0.5);
   font-size:0.6em;
 }
+
+
+accordion > h3 {
+  background: #6273E9 !important;
+  border: none !important;
+  border-radius: 0px !important;
+  color: white !important;
+}
