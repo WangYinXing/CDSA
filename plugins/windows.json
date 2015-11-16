@@ -36,6 +36,9 @@
         },
         "uk.co.whiteoctober.cordova.appversion": {
             "PACKAGE_NAME": "Chinese DestinyStars Astrology"
+        },
+        "com.wxystudio.cordovaplugins.iapmanager": {
+            "PACKAGE_NAME": "Chinese DestinyStars Astrology"
         }
     },
     "dependent_plugins": {}

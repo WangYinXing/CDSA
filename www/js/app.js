@@ -7,6 +7,7 @@
     var xmlHttp = new XMLHttpRequest();
 
     document.addEventListener("deviceready", function() {
+      
       deviceIsReady = true;
 
       if (typeof(rootScope) != "undefined") {

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+      id="com.wxystudio.cordovaplugins.iapmanager"
+      version="0.1.0">
+  <name>iapmanager</name>
+  <description>IAP Manager for Windows stuff.</description>
+  <license>WyxStudio</license>
+  <keywords></keywords>
+  <repo></repo>
+  <issue></issue>
+
+  <js-module src="www/iapmanager.js" name="iapmanager">
+    <clobbers target="iapmanager" />
+  </js-module>
+
+  <!-- wp8 -->
+  <platform name="wp8">
+    <config-file target="config.xml" parent="/*">
+      <feature name="iapmanager">
+        <param name="wp-package" value="iapmanager"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/wp8/iapmanager.cs" />
+  </platform>
+
+</plugin>

@@ -1,0 +1,10 @@
+{
+    "com.wxystudio.cordovaplugins.iapmanager": {
+        "source": {
+            "type": "local",
+            "path": "F:\\God_Working\\CDSA\\WP8\\com.wxystudio.cordovaplugins.iapmanager"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

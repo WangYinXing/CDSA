@@ -8,34 +8,37 @@
     },
     "installed_plugins": {
         "cc.fovea.cordova.purchase": {
-            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
         },
         "com.ionic.keyboard": {
-            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
         },
         "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
         },
         "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
         },
         "uk.co.whiteoctober.cordova.appversion": {
-            "PACKAGE_NAME": "{ab039bc0-8af1-11e5-9c0b-492bf0b10ea2}"
+            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
+        },
+        "com.wxystudio.cordovaplugins.iapmanager": {
+            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
         }
     },
     "dependent_plugins": {}
