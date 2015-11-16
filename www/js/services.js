@@ -746,7 +746,8 @@
 
               arrAP.push({
                   //MS: moment(pDate).add(year, 'years').format("YYYY"),
-                  MS: (i * 10 + j + LP).toFixed(0),
+                  //MS: (i * 10 + j + LP + year).toFixed(0),
+                  MS: year,
                   LPS: gon[stem],
                   LPB: ji[branch],
               });
