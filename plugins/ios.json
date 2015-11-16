@@ -36,6 +36,12 @@
         },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.fsrc.destinystars"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.fsrc.destinystars"
+        },
+        "de.appplant.cordova.plugin.email-composer": {
+            "PACKAGE_NAME": "com.fsrc.destinystars"
         }
     },
     "dependent_plugins": {}
