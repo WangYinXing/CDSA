@@ -1,3 +1,4 @@
+/*
 @font-face {
   font-family: "wts";
   src: url("../fonts/wts.ttf");
@@ -13,7 +14,7 @@
   font-family: "Tharlon";
   src: url("../fonts/Tharlon-Regular.ttf");
 }
-
+*/
 
 
 
@@ -397,7 +398,7 @@ select, input {
 }
 
 .yellow-text {
-    color: #9E9E01;
+    color: #EAAE02;
 }
 
 .grey-text {
@@ -487,7 +488,7 @@ select, input {
 .pillar-text {
     font-family:"Franchise";
     font-weight:600;
-    font-size: 1.2em;
+    font-size: 1.0em;
 }
 
 .annual-pillar {

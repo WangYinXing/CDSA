@@ -42,8 +42,18 @@ app.controller('speleCtrl', ['$scope', 'gApp', '$rootScope', 'FourPillarCalc', f
         var data = gApp.json.spele[dsPinyin];
 
         if ($scope.mode == "stem") {
+            /*
+                User selected day stem..........
+
+                DAY STEM
+            */
             if ($scope.unit == 1)
                 $scope.desc = data["DS"] + gApp.json.spele["DS_Footer"];
+            /*
+                User selected hour, year, month stem.....
+
+
+            */
             else {
                 $scope.typeDesc = data["HS"][type][0];
 
