@@ -3,7 +3,7 @@
   /*                          */
   app.controller('unlockreadingsCtrl', ['$scope',  'gApp', function($scope, gApp) {
     var platform = device.platform.toLowerCase();
-
+    
 /*######################################################################################################################################################################################
 ######################################################################################################################################################################################
 
@@ -11,7 +11,6 @@
 
 ######################################################################################################################################################################################
 ######################################################################################################################################################################################*/
-
     if (platform == "win32nt") {
       $scope.init = function () {
         iapmanager.init(function (arg) {
@@ -68,6 +67,7 @@
             }
 
             $(".blackScreen").hide();
+            $(".prodpending").hide();
 
             if (!$scope.isOnline()) {
                 alert("Your phone is offline now and you need to go online to purchase life readings. Any life readings you have already purchased are now available to read offline.");
@@ -140,6 +140,7 @@
     $scope.onClickBuyAll = function () {
         var id = "com.fsrc.destinystars.allreading";
 
+        $(".prodpending").show();
         iapmanager.purchaseProduct(function (arg) {
             //alert("Succeed " + arg);
 
@@ -156,7 +157,7 @@
 
 
 
-      $scope.onClickProd = function (index) {1
+      $scope.onClickProd = function (index) {
         if (gApp.boughtAll) {
           app.navi.resetToPage('lifereadings.html', { animation: 'slide', numeral: index + 1 });
           return;
@@ -175,7 +176,6 @@
                 } else {
                     break;
                 }
-
             }
         }
 
@@ -183,6 +183,8 @@
             alert("Your phone is offline now and you need to go online to purchase life readings.");
             return;
         }
+
+        $(".prodpending").show();
 
         iapmanager.purchaseProduct(function (arg) {
             alert("Succeed " + arg);
@@ -195,7 +197,6 @@
       };
 
     }
-
 
     
 

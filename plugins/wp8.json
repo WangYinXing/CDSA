@@ -8,37 +8,43 @@
     },
     "installed_plugins": {
         "cc.fovea.cordova.purchase": {
-            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
+            "PACKAGE_NAME": "{13ffe2e0-8c74-11e5-bd20-134f5f1eba8e}"
         },
         "com.ionic.keyboard": {
-            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
-        },
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
-        },
-        "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
-        },
-        "uk.co.whiteoctober.cordova.appversion": {
-            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
+            "PACKAGE_NAME": "{13ffe2e0-8c74-11e5-bd20-134f5f1eba8e}"
         },
         "com.wxystudio.cordovaplugins.iapmanager": {
-            "PACKAGE_NAME": "{922244b0-8af8-11e5-997f-b76fcaf56eb6}"
+            "PACKAGE_NAME": "{13ffe2e0-8c74-11e5-bd20-134f5f1eba8e}"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "{13ffe2e0-8c74-11e5-bd20-134f5f1eba8e}"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "{13ffe2e0-8c74-11e5-bd20-134f5f1eba8e}"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "{13ffe2e0-8c74-11e5-bd20-134f5f1eba8e}"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "{13ffe2e0-8c74-11e5-bd20-134f5f1eba8e}"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "{13ffe2e0-8c74-11e5-bd20-134f5f1eba8e}"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "{13ffe2e0-8c74-11e5-bd20-134f5f1eba8e}"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "{13ffe2e0-8c74-11e5-bd20-134f5f1eba8e}"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "{13ffe2e0-8c74-11e5-bd20-134f5f1eba8e}"
+        },
+        "de.appplant.cordova.plugin.email-composer": {
+            "PACKAGE_NAME": "{13ffe2e0-8c74-11e5-bd20-134f5f1eba8e}"
+        },
+        "uk.co.whiteoctober.cordova.appversion": {
+            "PACKAGE_NAME": "{13ffe2e0-8c74-11e5-bd20-134f5f1eba8e}"
         }
     },
     "dependent_plugins": {}
