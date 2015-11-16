@@ -523,3 +523,14 @@ accordion > h3 {
   border-radius: 0px !important;
   color: white !important;
 }
+
+accordion .title {
+  font-weight: bolder;
+  margin-top: 0.4em;
+  margin-bottom:0em;
+}
+
+accordion .contents {
+  margin-top: 0.4em;
+  margin-bottom: 1em;
+}
