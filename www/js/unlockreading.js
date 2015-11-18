@@ -1,9 +1,19 @@
-﻿ /*                          */
+﻿ var commentaryTesting = false;
+
+
+
+ /*                          */
   // page: unlockreadings.html
   /*                          */
   app.controller('unlockreadingsCtrl', ['$scope',  'gApp', function($scope, gApp) {
-    //var platform = device.platform.toLowerCase();
-    var platform = "win32nt";
+    var platform = "";
+
+    if (commentaryTesting) {
+      platform = "win32nt";
+    }
+    else {
+      platform = device.platform.toLowerCase();
+    }
     
 /*######################################################################################################################################################################################
 ######################################################################################################################################################################################
@@ -18,10 +28,13 @@
 
         This is temp code for reading test......
         */
-        $scope.makeAsBoughtAll();
-        $(".blackScreen").hide();
-        //$(".prodpending").hide();
-        return;
+        if (commentaryTesting) {
+          $scope.makeAsBoughtAll();
+          $(".blackScreen").hide();
+          //$(".prodpending").hide();
+          return;
+        }
+        
         /*
 
         ------------------------------------------------------------------------------------------------*/
