@@ -1,0 +1,208 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"iapmanager\"><param name=\"wp-package\" value=\"iapmanager\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Console\"><param name=\"wp-package\" value=\"DebugConsole\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"wp-package\" value=\"Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"wp-package\" value=\"NetworkStatus\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"wp-package\" value=\"SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"wp-package\" value=\"StatusBar\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"wp-package\" value=\"SocialSharing\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AppVersion\"><param name=\"wp-package\" value=\"AppVersion\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "Properties/WMAppManifest.xml": {
+                "parents": {
+                    "/Deployment/App/Capabilities": [
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_IDENTITY_DEVICE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_NETWORKING\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cc.fovea.cordova.purchase": {
+            "PACKAGE_NAME": "{cc3dec20-8d92-11e5-ae85-0d918090c870}"
+        },
+        "com.ionic.keyboard": {
+            "PACKAGE_NAME": "{cc3dec20-8d92-11e5-ae85-0d918090c870}"
+        },
+        "com.wxystudio.cordovaplugins.iapmanager": {
+            "PACKAGE_NAME": "{cc3dec20-8d92-11e5-ae85-0d918090c870}"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "{cc3dec20-8d92-11e5-ae85-0d918090c870}"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "{cc3dec20-8d92-11e5-ae85-0d918090c870}"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "{cc3dec20-8d92-11e5-ae85-0d918090c870}"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "{cc3dec20-8d92-11e5-ae85-0d918090c870}"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "{cc3dec20-8d92-11e5-ae85-0d918090c870}"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "{cc3dec20-8d92-11e5-ae85-0d918090c870}"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "{cc3dec20-8d92-11e5-ae85-0d918090c870}"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "{cc3dec20-8d92-11e5-ae85-0d918090c870}"
+        },
+        "de.appplant.cordova.plugin.email-composer": {
+            "PACKAGE_NAME": "{cc3dec20-8d92-11e5-ae85-0d918090c870}"
+        },
+        "uk.co.whiteoctober.cordova.appversion": {
+            "PACKAGE_NAME": "{cc3dec20-8d92-11e5-ae85-0d918090c870}"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/com.ionic.keyboard/www/keyboard.js",
+            "id": "com.ionic.keyboard.keyboard",
+            "pluginId": "com.ionic.keyboard",
+            "clobbers": [
+                "cordova.plugins.Keyboard"
+            ]
+        },
+        {
+            "file": "plugins/com.wxystudio.cordovaplugins.iapmanager/www/iapmanager.js",
+            "id": "com.wxystudio.cordovaplugins.iapmanager.iapmanager",
+            "pluginId": "com.wxystudio.cordovaplugins.iapmanager",
+            "clobbers": [
+                "iapmanager"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-console/www/logger.js",
+            "id": "cordova-plugin-console.logger",
+            "pluginId": "cordova-plugin-console",
+            "clobbers": [
+                "cordova.logger"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-console/www/console-via-logger.js",
+            "id": "cordova-plugin-console.console",
+            "pluginId": "cordova-plugin-console",
+            "clobbers": [
+                "console"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "id": "cordova-plugin-device.device",
+            "pluginId": "cordova-plugin-device",
+            "clobbers": [
+                "device"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-network-information/www/network.js",
+            "id": "cordova-plugin-network-information.network",
+            "pluginId": "cordova-plugin-network-information",
+            "clobbers": [
+                "navigator.connection",
+                "navigator.network.connection"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+            "id": "cordova-plugin-network-information.Connection",
+            "pluginId": "cordova-plugin-network-information",
+            "clobbers": [
+                "Connection"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "pluginId": "cordova-plugin-splashscreen",
+            "clobbers": [
+                "navigator.splashscreen"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+            "id": "cordova-plugin-statusbar.statusbar",
+            "pluginId": "cordova-plugin-statusbar",
+            "clobbers": [
+                "window.StatusBar"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+            "id": "cordova-plugin-x-socialsharing.SocialSharing",
+            "pluginId": "cordova-plugin-x-socialsharing",
+            "clobbers": [
+                "window.plugins.socialsharing"
+            ]
+        },
+        {
+            "file": "plugins/de.appplant.cordova.plugin.email-composer/www/email_composer.js",
+            "id": "de.appplant.cordova.plugin.email-composer.EmailComposer",
+            "pluginId": "de.appplant.cordova.plugin.email-composer",
+            "clobbers": [
+                "cordova.plugins.email",
+                "plugin.email"
+            ]
+        },
+        {
+            "file": "plugins/uk.co.whiteoctober.cordova.appversion/www/AppVersionPlugin.js",
+            "id": "uk.co.whiteoctober.cordova.appversion.AppVersionPlugin",
+            "pluginId": "uk.co.whiteoctober.cordova.appversion",
+            "clobbers": [
+                "cordova.getAppVersion"
+            ]
+        }
+    ]
+}
