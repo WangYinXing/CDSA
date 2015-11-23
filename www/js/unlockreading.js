@@ -1,4 +1,4 @@
-﻿ var commentaryTesting = false;
+﻿ var commentaryTesting = true;
 
 
 
