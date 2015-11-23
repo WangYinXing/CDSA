@@ -5,6 +5,9 @@
   // page: unlockreadings.html
   /*                          */
  app.controller('unlockreadingsCtrl', ['$scope', 'gApp', function ($scope, gApp) {
+     $scope.gotoPage = gApp.gotoPage;
+
+
     if (commentaryTesting) {
       //platform = "win32nt";
     }
