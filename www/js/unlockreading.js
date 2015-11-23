@@ -1,18 +1,26 @@
-﻿ var commentaryTesting = true;
-
+﻿ var commentaryTesting = false;
 
 
  /*                          */
   // page: unlockreadings.html
   /*                          */
-  app.controller('unlockreadingsCtrl', ['$scope',  'gApp', function($scope, gApp) {
-    var platform = "";
-
+ app.controller('unlockreadingsCtrl', ['$scope', 'gApp', function ($scope, gApp) {
     if (commentaryTesting) {
-      platform = "win32nt";
+      //platform = "win32nt";
     }
     else {
-      platform = device.platform.toLowerCase();
+      //platform = device.platform.toLowerCase();
+    }
+
+
+/*##########################################################################################
+
+    Check if the connection is valid or not....
+
+##########################################################################################*/
+    $scope.isOnline = function () {
+        var type = navigator.network.connection.type;
+        return (type != Connection.NONE && type != Connection.UNKNOWN);
     }
     
 /*######################################################################################################################################################################################
@@ -22,8 +30,9 @@
 
 ######################################################################################################################################################################################
 ######################################################################################################################################################################################*/
-    if (platform == "win32nt") {
-      $scope.init = function () {
+      //if (platform == "win32nt") {
+    if (window.platform == "wp") {
+        $scope.init = function () {
         /*_______________________________________________________________________________________________
 
         This is temp code for reading test......
@@ -34,7 +43,6 @@
           //$(".prodpending").hide();
           return;
         }
-        
         /*
 
         ------------------------------------------------------------------------------------------------*/
@@ -184,11 +192,15 @@
 
 
 
-      $scope.onClickProd = function (index) {
+    $scope.onClickProd = function (index) {
+        $(".prodpending").show();
+
         if (gApp.boughtAll) {
           app.navi.resetToPage('lifereadings.html', { animation: 'slide', numeral: index + 1 });
           return;
         }
+
+
 
         var id = "com.fsrc.destinystars.lr__" + index;
         var prod;
@@ -235,7 +247,8 @@
 ######################################################################################################################################################################################
 ######################################################################################################################################################################################*/
 
-    else if (platform == "ios" || platform == "android") {
+     //else if (platform == "ios" || platform == "android") {
+     else {
       /*##########################################################################################
         Initial function.....
       ##########################################################################################*/
@@ -460,15 +473,7 @@
       };
 
 
-      /*##########################################################################################
-
-          Check if the connection is valid or not....
-
-      ##########################################################################################*/
-      $scope.isOnline = function() {
-        var type = navigator.network.connection.type;
-        return (type != Connection.NONE && type != Connection.UNKNOWN);
-      }
+      
 
 
       /*##########################################################################################
