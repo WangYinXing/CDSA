@@ -1,5 +1,18 @@
 (function(){
   'use strict';
+	if ((navigator.userAgent.match(/iPhone/i)) == "iPhone" || (navigator.userAgent.match(/iPad/i)) == "iPad") {
+        window.platform = "ios";
+    }
+    else if ((navigator.userAgent.match(/Android/i)) == "Android") {
+        window.platform = "android";
+    }
+    else if ((navigator.userAgent.match(/Windows Phone/i)) == "Windows Phone") {
+        window.platform = "wp";
+    }
+    else {
+        window.platform = "browser";
+    }
+
     var deviceIsReady = false;
     var rootScope;
 
