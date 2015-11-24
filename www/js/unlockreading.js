@@ -96,7 +96,7 @@
                 var index = parseInt(id.substr(id.lastIndexOf("_") + 1));
 
                 // Bought all of them already......
-                if (id == "com.fsrc.destinystars.allreading" && arg[i].state == 2) {
+                if (id == "com.fsrc.destinystars.allreadings" && arg[i].state == 2) {
                     $scope.makeAsBoughtAll();
                     break;
                 }
@@ -176,7 +176,7 @@
     }
 
     $scope.onClickBuyAll = function () {
-        var id = "com.fsrc.destinystars.allreading";
+        var id = "com.fsrc.destinystars.allreadings";
 
         $(".prodpending").show();
         iapmanager.purchaseProduct(function (arg) {
