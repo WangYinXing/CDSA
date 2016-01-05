@@ -19,6 +19,9 @@ app.controller('speleCtrl', ['$scope', 'gApp', '$rootScope', 'FourPillarCalc', f
         $scope.unit = index;
 
         var xs = "";
+        var arrDS = $scope.ret.fpc[1].stem.match(/([\+\-]?)(\w+)\s+\[(\w+)(.)\]/);
+
+        var DS = arrDS[3];
 
         if (mode == "stem")
             xs = $scope.ret.fpc[index].stem;
@@ -39,7 +42,7 @@ app.controller('speleCtrl', ['$scope', 'gApp', '$rootScope', 'FourPillarCalc', f
 
         $scope.type = type;
 
-        var data = gApp.json.spele[dsPinyin];
+        var data = gApp.json.spele[DS];
 
         if ($scope.mode == "stem") {
             /*

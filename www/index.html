@@ -108,6 +108,23 @@
 
         document.addEventListener("deviceready", onDeviceReady, false);
         function onDeviceReady() {
+            if ((navigator.userAgent.match(/iPhone/i)) == "iPhone" || (navigator.userAgent.match(/iPad/i)) == "iPad") {
+                window.platform = "ios";
+            }
+            else if ((navigator.userAgent.match(/Android/i)) == "Android") {
+                window.platform = "android";
+            }
+            else if ((navigator.userAgent.match(/Windows Phone/i)) == "Windows Phone") {
+                window.platform = "wp";
+            }
+            else if ((navigator.userAgent.match(/Windows NT/i)) == "Windows NT") {
+                window.platform = "win";
+            }
+            else {
+                window.platform = "browser";
+            }
+
+
             StatusBar.hide();
         }
 

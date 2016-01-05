@@ -314,8 +314,6 @@
           store.when( "product" ).loaded( function(product) {
             console.log( "Loaded " + product.id );
 
-
-
             if ( ++gApp.loadedCount == 101 ) {
               $(".blackScreen").hide();
             }
@@ -328,11 +326,13 @@
               //alert( "Error :" + e.code + " : " + e.message );
 
               console.log( store.ERR_LOAD );
-              alert( e.message );
+              console.log(e.code);
 
-              if ( e.code == store.ERR_LOAD ) {
-                app.navi.resetToPage('home.html', {animation : 'slide'});
-              }
+              $(".prodpending").hide();
+
+              //if ( e.code == store.ERR_LOAD ) {
+              app.navi.resetToPage('home.html', {animation : 'slide'});
+              //}
           });
           store.ready(function() {
             //alert("Restore completed.")
