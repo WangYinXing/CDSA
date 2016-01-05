@@ -11,33 +11,33 @@
 		repButton: true,
 		durationStep: 1,
 		durationSteppers: {"d": 1, "h": 1, "i": 1, "s": 1}
-		
+
 	});
 	$.extend( $.mobile.datebox.prototype, {
 		_dbox_run: function() {
 			var w = this,
 				g = this.drag,
 				timer = 150;
-				
+
 			if ( g.cnt > 10 ) { timer = 100; }
 			if ( g.cnt > 30 ) { timer = 50; }
 			if ( g.cnt > 60 ) { timer = 20; }
 			if ( g.cnt > 120 ) { timer = 10; }
 			if ( g.cnt > 240 ) { timer = 3; }
-			
+
 			g.didRun = true;
 			g.cnt++;
-			
+
 			w._offset( g.target[0], g.target[1], false );
 			w._dbox_run_update();
 			w.runButton = setTimeout(function() {w._dbox_run();}, timer);
 		},
 		_dbox_fixstep: function( order ) {
-			// Turn back off steppers when displaying a less precise 
+			// Turn back off steppers when displaying a less precise
 			// unit in the same control.
 			var step = this.options.durationSteppers,
 				actual = this.options.durationStep;
-			
+
 			if ( $.inArray( "s", order ) > -1 ) {
 				step.i = 1;
 				step.s = actual;
@@ -62,7 +62,7 @@
 				w.lastDuration = 0;
 				if ( dur ) { w.theDate.setTime( w.initDate.getTime() ); }
 			}
-			
+
 			if ( dur ) {
 				w.lastDuration = i / 1000;
 				if ( o.minDur !== false &&
@@ -78,26 +78,26 @@
 					cDur = w._dur( o.maxDur * 1000 );
 				}
 			}
-				
+
 			if ( shortRun !== true && dur !== true ) {
 				w._check();
-			
+
 				if ( o.mode === "datebox" ) {
 					w.d.intHTML
 						.find( ".ui-datebox-header" )
 							.find( "h4" )
 								.text( w._formatter( w.__( "headerFormat" ), w.theDate ) );
 				}
-				
+
 				if ( o.useSetButton ) {
-					if ( w.dateOK === false ) { 
+					if ( w.dateOK === false ) {
 						w.setBut.addClass( "ui-state-disabled" );
 					} else {
 						w.setBut.removeClass( "ui-state-disabled" );
 					}
 				}
 			}
-			
+
 			w.d.divIn.find( "input" ).each(function () {
 				switch ( $(this).data( "field" ) ) {
 					case "y":
@@ -114,7 +114,7 @@
 							if ( w.__("timeFormat") === 12 ) {
 								$(this).val(w.theDate.get12hr());
 							} else {
-								$(this).val(w.theDate.get(3)); 
+								$(this).val(w.theDate.get(3));
 							}
 						}
 						break;
@@ -123,7 +123,7 @@
 							$(this).val(cDur[2]);
 						} else {
 							$(this).val(w._zPad(w.theDate.get(4)));
-						} 
+						}
 						break;
 					case "M":
 						$(this).val(w.__("monthsOfYearShort")[w.theDate.get(1)]); break;
@@ -138,13 +138,13 @@
 		},
 		_dbox_vhour: function (delta) {
 			var w = this,
-				o = this.options, tmp, 
+				o = this.options, tmp,
 				closeya = [25,0],
 				closenay = [25,0];
-				
+
 			if ( o.validHours === false ) { return true; }
 			if ( $.inArray(w.theDate.getHours(), o.validHours) > -1 ) { return true; }
-			
+
 			tmp = w.theDate.getHours();
 			$.each(o.validHours, function(){
 				if ( ((tmp < this)?1:-1) === delta ) {
@@ -162,14 +162,14 @@
 		},
 		_dbox_enter: function (item) {
 			var tmp,
-				w = this, 
+				w = this,
 				t = 0;
-			
+
 			if ( item.data( "field" ) === "M" ) {
 				tmp = $.inArray( item.val(), w.__("monthsOfYearShort") );
 				if ( tmp > -1 ) { w.theDate.setMonth( tmp ); }
 			}
-			
+
 			if ( item.val() !== "" && item.val().toString().search(/^[0-9]+$/) === 0 ) {
 				switch ( item.data( "field" ) ) {
 					case "y":
@@ -192,7 +192,7 @@
 						t += parseInt(item.val(),10); break;
 				}
 			}
-			if ( this.options.mode === "durationbox" ) { 
+			if ( this.options.mode === "durationbox" ) {
 				w.theDate.setTime( w.initDate.getTime() + ( t * 1000 ) );
 			}
 			w.refresh();
@@ -206,10 +206,10 @@
 			this._build.datebox.apply(this,[]);
 		},
 		"datebox": function () {
-			var offAmount, i, y, tmp, 
+			var offAmount, i, y, tmp,
 				w = this,
 				g = this.drag,
-				o = this.options, 
+				o = this.options,
 				dur = ( o.mode === "durationbox" ? true : false ),
 				cnt = -2,
 				defDurOrder = ["d","h","i","s"],
@@ -220,25 +220,25 @@
 				divMinus = divPlus.clone(),
 				divLab = divBase.clone(),
 				inBase = $("<div><input type='text'></div>")
-					.addClass( "ui-input-text ui-body-" + o.themeInput+ 
+					.addClass( "ui-input-text ui-body-" + o.themeInput+
 						" ui-corner-all ui-mini ui-shadow-inset"),
 				butBase = $( "<div></div>" ),
 				butClass = "ui-btn-inline ui-link ui-btn ui-btn-" + o.themeButton +
 					" ui-btn-icon-notext ui-shadow ui-corner-all";
-			
+
 			if ( typeof w.d.intHTML !== "boolean" ) {
 				w.d.intHTML.empty().remove();
 			}
-			
+
 			w.d.headerText = ( ( w._grabLabel() !== false ) ?
-				w._grabLabel() : 
-				( ( o.mode === "datebox" ) ? 
+				w._grabLabel() :
+				( ( o.mode === "datebox" ) ?
 					w.__("titleDateDialogLabel") :
 					w.__("titleTimeDialogLabel")
 				)
 			);
 			w.d.intHTML = $( "<span>" );
-			
+
 			w.fldOrder = ( ( o.mode === "datebox" ) ?
 				w.__("dateFieldOrder") :
 				( ( dur ) ? w.__("durationOrder") : w.__("timeFieldOrder") )
@@ -252,30 +252,30 @@
 				w.dateOK = true;
 				w._dbox_fixstep(w.fldOrder);
 			}
-			
-			if ( o.mode === "datebox" ) { 
+
+			if ( o.mode === "datebox" ) {
 				$( "<div class='" + uid + "header'><h4>" +
 						w._formatter( w.__("headerFormat"), w.theDate ) + "</h4></div>")
-					.appendTo(w.d.intHTML); 
+					.appendTo(w.d.intHTML);
 			}
-			
+
 			for(i = 0; i < w.fldOrder.length; i++) {
 				tmp = w._gridblk.b[i];
 				if ( dur ) {
 					offAmount = o.durationSteppers[w.fldOrder[i]];
 				} else {
-					if ( w.fldOrder[i] === "i" ) { 
-						offAmount = o.minuteStep; 
-					} else { 
+					if ( w.fldOrder[i] === "i" ) {
+						offAmount = o.minuteStep;
+					} else {
 						offAmount = 1;
 					}
 				}
-				if ( w.fldOrder[i] !== "a" || w.__("timeFormat") === 12 ) {					
+				if ( w.fldOrder[i] !== "a" || w.__("timeFormat") === 12 ) {
 					$("<div>")
 						.append( (dur) ?
-							"<label>" + 
+							"<label>" +
 							w.__( "durationLabel" )[ $.inArray( w.fldOrder[i], defDurOrder ) ] +
-							"</label>" : 
+							"</label>" :
 							"" )
 						.addClass("ui-block-"+tmp)
 						.appendTo(divLab);
@@ -292,7 +292,7 @@
 						});
 					w._makeEl( butBase, {"attr": {
 							"field": w.fldOrder[i],
-							"amount": offAmount 
+							"amount": offAmount
 						} } )
 						.addClass( uid + "cbut ui-block-" + tmp + " ui-icon-plus " + butClass)
 						.appendTo( divPlus )
@@ -306,40 +306,40 @@
 					cnt++;
 				}
 			}
-			
+
 			if ( dur ) {
 				divLab
 					.addClass("ui-datebox-dboxlab ui-grid-"+w._gridblk.b[cnt])
 					.appendTo(w.d.intHTML);
 			}
-			
+
 			divPlus
 				.addClass("ui-grid-"+w._gridblk.b[cnt])
 				.appendTo(w.d.intHTML);
-				
+
 			divIn
 				.addClass("ui-datebox-dboxin ui-grid-"+w._gridblk.b[cnt])
 				.appendTo(w.d.intHTML);
-				
+
 			divMinus
 				.addClass("ui-grid-"+w._gridblk.b[cnt])
 				.appendTo(w.d.intHTML);
-			
+
 			w.d.divIn = divIn;
 			w._dbox_run_update(true);
-			
+
 			if ( w.dateOK !== true ) {
 				divIn.find( "input" ).addClass( "ui-state-disable" );
 			} else {
 				divIn.find( ".ui-state-disable" ).removeClass( "ui-state-disable" );
 			}
-			
+
 			if ( o.useSetButton || o.useClearButton ) {
 				y = $( "<div>", { "class": uid + "controls" } );
-				
+
 				if ( o.useSetButton ) {
 					w.setBut = w._stdBtn.close.apply(
-						w, [(o.mode==="datebox") ? 
+						w, [(o.mode==="datebox") ?
 							w.__("setDateButtonLabel") :
 							( dur ) ?
 								w.__("setDurationButtonLabel") :
@@ -358,7 +358,7 @@
 				}
 				y.appendTo(w.d.intHTML);
 			}
-			
+
 			if ( ! o.repButton ) {
 				w.d.intHTML.on(o.clickEvent, "."+ uid + "cbut", function(e) {
 					divIn.find(":focus").blur();
@@ -367,9 +367,9 @@
 					w._offset($(this).data("field"), $(this).data("amount"));
 				});
 			}
-			
+
 			divIn.on("change", "input", function() { w._dbox_enter($(this)); });
-					
+
 			if ( w.wheelExists ) { // Mousewheel operation, if plugin is loaded
 				divIn.on("mousewheel", "input", function(e,d) {
 					e.preventDefault();
@@ -377,7 +377,7 @@
 					w._offset($(this).data("field"), ((d<0)?-1:1)*$(this).data("amount"));
 				});
 			}
-			
+
 			if ( o.repButton ) {
 				w.d.intHTML.on(g.eStart, "."+ uid + "cbut", function() {
 					divIn.find(":focus").blur();
@@ -389,7 +389,9 @@
 					w._dbox_run_update();
 					if ( !w.runButton ) {
 						g.target = tmp;
-						w.runButton = setTimeout(function() {w._dbox_run();}, 500);
+						w.runButton = setTimeout(function() {
+              w._dbox_run();
+            }, 500);
 					}
 				});
 				w.d.intHTML.on(g.eEndA, "." + uid + "cbut", function(e) {

@@ -26,6 +26,7 @@ app.controller('fpcalcCtrl', ['$scope', 'gApp', 'FourPillarCalc', function ($sco
         }
 
         //$("#lng").val("0.0");
+      $("#dtBox").DateTimePicker();
 
         $("#datepicker").datebox();
         $("#timepicker").datebox();
@@ -43,14 +44,14 @@ app.controller('fpcalcCtrl', ['$scope', 'gApp', 'FourPillarCalc', function ($sco
 
         $('#lng').blur(function () {
             var lng = parseFloat($(this).val());
-            
+
             if (isNaN(lng)) {
                 alert("Please input longitude correctly. ie: -120.425");
                 $(this).focus();
                 $(this).val("0.0");
                 return;
             }
-            
+
             if (lng < -180.0 || lng > 180) {
                 alert("Longitude should be in -180.0 ~ 180.0");
                 $(this).focus();
@@ -85,7 +86,7 @@ app.controller('fpcalcCtrl', ['$scope', 'gApp', 'FourPillarCalc', function ($sco
             gApp.myLocation = null;
         } else {
             $(".blackScreen").hide();
-            
+
         }
 
         gApp.showLoadingScreen(false);
@@ -233,7 +234,7 @@ app.controller('fpcalcCtrl', ['$scope', 'gApp', 'FourPillarCalc', function ($sco
 
         $(".blackScreen").show();
 
-        
+
 
         navigator.geolocation.getCurrentPosition(onSuccess, onError, {enableHighAccuracy: true});
         //navigator.geolocation.getCurrentPosition(onSuccess, onError);
@@ -264,7 +265,7 @@ app.controller('fpcalcCtrl', ['$scope', 'gApp', 'FourPillarCalc', function ($sco
             $("#lng").val("0.0");
             return;
         }
-        
+
 
         var date = new Date($scope.date.getFullYear(), $scope.date.getMonth(), $scope.date.getDate(),
             $scope.time.getHours(), $scope.time.getMinutes(), $scope.time.getSeconds(), 0);

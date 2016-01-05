@@ -16,7 +16,7 @@
         </ons-col>
       </ons-row>
     </ons-list-item>
-      
+
 
       <div class="lucent" style="margin: 10px;">When online select birth place from map or from current position to get timezone and longitude. Change Timezone if a different one was in use on birth date.</div>
       <ons-list-item style="margin-top: 15px; margin-bottom: 15px;">
@@ -75,10 +75,16 @@
     <!--<ons-list-item modifier="chevron" ng-click="chooseDateTime('date');">-->
       <ons-list-item ng-click="chooseDateTime('date');">
           <ons-row>
+            <div id="dtBox"></div>
+
+
               <ons-col width="50%">
                   <span>Birth Date:</span>
               </ons-col>
               <ons-col>
+                <!--
+                <input type="text" data-field="date" readonly>
+                -->
 
                   <input style="width:100%" name="datepicker" id="datepicker" type="text" data-role="datebox" data-options='{"mode":"datebox", "useNewStyle":true}' />
 
@@ -93,8 +99,12 @@
                   <span>Birth Time: </span>
               </ons-col>
               <ons-col>
+                <!--
+                <input type="text" data-field="time" readonly>
+                -->
 
-                  <input style="width:100%" name="timepicker" id="timepicker" type="text" data-role="datebox" data-options='{"mode":"timeflipbox", "useNewStyle":true}' />
+                <input style="width:100%" name="timepicker" id="timepicker" type="text" data-role="datebox" data-options='{"mode":"timeflipbox", "useNewStyle":true}' />
+
               </ons-col>
           </ons-row>
       </ons-list-item>
@@ -226,13 +236,13 @@
 
     <h2>Chinese Destiny Stars Astrology</h2>
     <div style="text-align: left; text-indent: 5px;">1. To get your free Year Star reading tap the Year Star icon on menu bar below.</div>
-    
+
     <p ng-click="gotoGetReading(ret.dn);" style="font-size: 1.3em; text-align: center; font-weight: bold;">
       Your Destiny Numeral is:
       <br/>
       <span style="font-size:1.5em; color: green;">{{ret.dn}}</span>
     </p>
-      
+
     <p style="font-size: 1.3em; text-align: center; font-weight: bold;">
       Your Hour Pillar is:
       <br/>

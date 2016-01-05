@@ -534,3 +534,10 @@ accordion .contents {
   margin-top: 0.4em;
   margin-bottom: 1em;
 }
+
+.dtpicker-buttonCont .dtpicker-button {
+  background:#8962ED;
+}
+.dtpicker-buttonCont .dtpicker-button {
+  padding:0px;
+}

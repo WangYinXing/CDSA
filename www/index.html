@@ -9,16 +9,16 @@
 
 
     <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
-    
+
     <link rel="stylesheet" href="lib/onsen/css/onsen-css-components-purple-theme.css">
-        
+
     <!--
     <link rel="stylesheet" href="lib/onsen/css/onsen-css-components-dark-theme.css">
     -->
     <link rel="stylesheet" href="css/app.css" />
-    
 
-    
+
+
 
     <script src="cordova.js"></script>
     <script src="lib/onsen/js/angular/angular.js"></script>
@@ -41,6 +41,8 @@
 
     <link rel="stylesheet" href="lib/slick/slick.css" />
     <link rel="stylesheet" href="lib/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="lib/flatdatepicker/DateTimePicker.css" />
+
 
 
     <script src="lib/jquery/dist/jquery.js"></script>
@@ -53,11 +55,13 @@
     <script src="lib/jqm-datebox/jqm-datebox.mode.flipbox.js"></script>
     <script type="text/javascript" src="lib/jqm-datebox/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
 
+
+    <script type="text/javascript" src="lib/flatdatepicker/DateTimePicker.js"></script>
     <script src="lib/owlcarousel/owl.carousel.js"></script>
     <script src="lib/slick/slick.js"></script>
 
 
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!--<script src="lib/ionic/js/ionic.bundle.js"></script>-->
 
     <script src="lib/onsen/js/onsenui.js"></script>
 
@@ -66,7 +70,7 @@
     ###############################################################################################################################-->
 
     <script src="js/config.js"></script>
-    
+
     <script src="js/home.js"></script>
     <script src="js/yearstar.js"></script>
     <script src="js/reading.js"></script>
@@ -81,7 +85,7 @@
     <script src="js/spele.js"></script>
     <script src="js/luannual.js"></script>
 
-    
+
 
 
 <!--###############################################################################################################################
@@ -156,7 +160,7 @@
         function initPushwooshForWindows() {
             if (typeof(cordova) == "undefined")
                 return;
-            
+
             var pushNotification = cordova.require("com.pushwoosh.plugins.pushwoosh.PushNotification");
 
             //set push notifications handler
@@ -260,7 +264,7 @@
     </script>
 
 
-    
+
 </head>
 
 <body class="campus" ng-controller="appCtrl">
