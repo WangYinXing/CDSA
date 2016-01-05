@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  
+
   var module = angular.module('cdsaDirectives', ['config']);
 
     module.directive('fpBigGonji', function (COLOR_TABLE) {
@@ -14,6 +14,10 @@
       controller: function($scope, $attrs) {
         if (angular.isDefined($attrs.nosign)) {
           $scope.nosign = true;
+        }
+
+        if (angular.isDefined($attrs.compact)) {
+          $scope.compactMode = true;
         }
 
         $scope.isSelected = function () {
