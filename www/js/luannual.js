@@ -4,6 +4,7 @@ app.controller('luannualCtrl', ['$scope', 'gApp', '$rootScope', 'FourPillarCalc'
         $scope.ret = gApp.fp_result;
         $scope.arrAP = $scope.ret.arrLP[8].AP;
 
+
         setTimeout(function () {
             $('.annual-pillar').slick({
                 infinite: false,
@@ -12,10 +13,10 @@ app.controller('luannualCtrl', ['$scope', 'gApp', '$rootScope', 'FourPillarCalc'
                 .on("afterChange", function (evt, slick, currentSlide) {
                     $scope.$apply(function () {
                         $scope.arrAP = $scope.ret.arrLP[currentSlide].AP;
-                    }); 
+                    });
             });
         }, 0);
-        
+
 
     };
 

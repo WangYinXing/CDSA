@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  
+
   var module = angular.module('cdsaServices', []);
 
   module.service('FourPillarCalc', function() {
@@ -287,7 +287,7 @@
 
 
       var solarTime = sHR.toString() + " : " + ( (sMin < 10) ? "0" + sMin.toString() : sMin.toString() );
-      
+
       if ((HR == 23) || (HR > 23 && HR < 24)) {
         hs1 = hs1 + 2;
       }
@@ -566,10 +566,10 @@
 
       var lpsBase = lps0;
       var lpbBase = lpb0;
-      
+
       var arrLP = [];
 
-      
+
 
         /*
 
@@ -709,7 +709,7 @@
 
 
           /*
-            
+
           */
 
 
@@ -733,7 +733,7 @@
                   lpbBase = lpbBase - 12 * FW;
               }
           }
-          
+
           var arrAP = [];
 
           for (var j = 0; j < 11; j++) {
@@ -756,8 +756,8 @@
           if (i == -1) {
               arrLP.push({
                   // Starting age
-                  MS: moment(pDate).add(i * 10 + LP, 'years').format("MMM DD YYYY"),
-                  // Luck pillar Stem 
+                  MS: "1st Luck Pillar",//moment(pDate).add(i * 10 + LP, 'years').format("MMM DD YYYY"),
+                  // Luck pillar Stem
                   LPS: ms,
                   // Luck pillar Branch
                   LPB: mb,
@@ -769,7 +769,7 @@
               arrLP.push({
                   // Starting age
                   MS: moment(pDate).add(i * 10 + LP, 'years').format("MMM DD YYYY"),
-                  // Luck pillar Stem 
+                  // Luck pillar Stem
                   LPS: gon[lpsBase],
                   // Luck pillar Branch
                   LPB: ji[lpbBase],
@@ -777,14 +777,14 @@
                   AP: arrAP,
               });
           }
-          
+
       }
 
       arrLP.reverse();
 
 
           /*
-            
+
           */
 
       var ret = {
