@@ -541,3 +541,7 @@ accordion .contents {
 .dtpicker-buttonCont .dtpicker-button {
   padding:0px;
 }
+
+.navigation-bar--android__left {
+  width: 27% !important;
+}
