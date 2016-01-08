@@ -140,6 +140,19 @@
         $.mobile.phonegapNavigationEnabled = true;
 
         ons.ready(function () {
+          /*
+            Replace alert function
+           */
+
+          window.alert = function(msg) {
+            ons.notification.alert({
+              title: 'CDSA',
+              message: msg
+            });
+          };
+
+
+
             if (ons.platform.isAndroid())
                 initPushwooshForAndroid();
             else if (ons.platform.isIOS())

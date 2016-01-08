@@ -40,12 +40,12 @@ app.controller('homeCtrl', ['$scope', '$window', 'gApp', function($scope, $windo
         catch(e) {
 
         }
-      } 
+      }
     }, 500);
   };
 
   $scope.$on("device_ready", function() {
-    
+
   });
 
   function onSuccess() {

@@ -1,0 +1,59 @@
+<div type="text/ng-template" ng-init="init();">
+  <br>
+  <div class='description'>
+    <p>
+      Unlock all 100 Life Readings for <span class='price'>44.99 USD</span><br> or your local currency equivalent.
+    </p>
+    <ons-button class="unlockall" modifier="light" ng-click="onClickBuyAll();"><ons-icon icon='ion-locked'></ons-icon> Unlock All</ons-button>
+  </div>
+  <br>
+  <br>
+
+  <div class='description'>
+    Unlock 1 Life Reading for <span class='price'>1.99 USD</span><br> or your local currency equivalent.
+  </div>
+  <ons-button class="refresh" modifier="light" ng-click="onRefresh();"><ons-icon icon='ion-refresh'></ons-icon> Restore</ons-button>
+  <!--
+  <div><span ng-click="onRefresh();" style='float:right;'><ons-icon icon='ion-refresh'></ons-icon> Restore</span></div>
+
+
+  <div class="center">Page 1</div>
+  -->
+  <div id="map"></div>
+  <div class="unlock-list">
+    <ons-row ng-repeat="i in [0,1,2,3,4,5,6,7,8,9]">
+      <ons-col ng-repeat="j in [0,1,2,3,4,5,6,7,8,9]"
+               ng-click="onClickProd( i * 10 + j );"
+               ng-class="{highlight: isRightDN( i * 10 + j )}"
+               class='locked'>
+        <div>{{i * 10 + j + 1}}</div>
+        <ons-icon class="prod-state icon_{{i * 10 + j }} locked" icon="ion-load-d"></ons-icon>
+      </ons-col>
+    </ons-row>
+  </div>
+  <div class="prodpending">
+
+    <div class="loadingWheelWrapper">
+      <span class='waitforsec'>Sending request to store.<br>
+    It will take a few seconds....</span><br>
+      <!--<img src="img/ajax-loader.gif"/>-->
+    </div>
+  </div>
+
+  <div class="blackScreen">
+
+    <div class="loadingWheelWrapper">
+      <span class='waitforsec'>Loading products from store.<br>
+    It will take a few seconds....</span><br>
+      <!--<img src="img/ajax-loader.gif"/>-->
+    </div>
+  </div>
+  <ons-bottom-toolbar>
+    <ons-row>
+      <ons-col class="action-col" ng-click="gotoPage('home');">
+        <div class="action-icon"><ons-icon icon="ion-home"></ons-icon></div>
+        <div class="action-label">Home</div>
+      </ons-col>
+    </ons-row>
+  </ons-bottom-toolbar>
+</div>
