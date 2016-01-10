@@ -1,6 +1,17 @@
 (function(){
   'use strict';
-
+	if ((navigator.userAgent.match(/iPhone/i)) == "iPhone" || (navigator.userAgent.match(/iPad/i)) == "iPad") {
+        window.platform = "ios";
+    }
+    else if ((navigator.userAgent.match(/Android/i)) == "Android") {
+        window.platform = "android";
+    }
+    else if ((navigator.userAgent.match(/Windows Phone/i)) == "Windows Phone") {
+        window.platform = "wp";
+    }
+    else {
+        window.platform = "browser";
+    }
 
     var deviceIsReady = false;
     var rootScope;
@@ -9,7 +20,7 @@
     var xmlHttp = new XMLHttpRequest();
 
     document.addEventListener("deviceready", function() {
-
+      
       deviceIsReady = true;
 
       if (typeof(rootScope) != "undefined") {
@@ -31,32 +42,7 @@
       }
     }]);
 
-    module.controller('appCtrl', ['$scope', '$rootScope', '$sce', '$http', 'gApp', function($scope, $rootScope, $sce, $http, gApp) {
-
-      /*
-        Detection of platform...
-      */
-      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-      if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
-      {
-        $rootScope.platform = 'iOS';
-        //return 'iOS';
-
-      }
-      else if( userAgent.match( /Android/i ) )
-      {
-        $rootScope.platform = 'Android';
-        //return 'Android';
-      }
-      else
-      {
-        $rootScope.platform = 'Windows';
-        //return 'unknown';
-      }
-
-      alert($rootScope.platform);
-
+    module.controller('appCtrl', ['$scope', '$sce', '$http', 'gApp', function($scope, $sce, $http, gApp) {
       app.gotoPage = gApp.gotoPage = function(page) {
         gApp.showLoadingScreen();
         var pageUrl = page + '.html';
@@ -75,6 +61,7 @@
 
         bShow ? $(".page-transitioning").show() : $(".page-transitioning").hide();
       };
+
 
       gApp.showLoadingScreen(false);
 
