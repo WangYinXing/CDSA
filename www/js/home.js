@@ -11,7 +11,7 @@ app.controller('homeCtrl', ['$scope', '$window', 'gApp', function($scope, $windo
     url = 'https://play.google.com/store/apps/details?id=com.fsrc.destinystars';
   }
   else if (ons.platform.isIOS()) {
-    url = 'https://itunes.apple.com/us/app/family-newsletter/id888043575';
+    url = 'https://itunes.apple.com/us/app/chinese-destiny-stars-astrology/id973849898?ls=1&mt=8';
   }
   else {  // WP
       url = 'http://windowsphone.com/s?appid=886fa5b2-48f9-4706-ba97-086f36f95f17';

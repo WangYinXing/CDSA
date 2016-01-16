@@ -14,6 +14,31 @@ app.controller('fpcalcCtrl', ['$scope', 'gApp', 'FourPillarCalc', function ($sco
 
     $.ajaxSetup({ cache: false });
 
+  $scope.onDate = function(evt) {
+    datePicker.show({date:$scope.date, mode:'date'}, function(date) {
+      $scope.$apply(function() {
+        $scope.date = date;
+        $scope.updateBirth();
+      });
+    }, function() {
+
+    })
+  };
+
+  $scope.onTime = function(evt) {
+    datePicker.show({date:$scope.time, mode:'time'}, function(time) {
+      $scope.$apply(function() {
+        $scope.time = time;
+        $scope.updateBirth();
+      });
+    })
+  };
+
+  $scope.updateBirth = function() {
+    $scope.strDate = moment($scope.date).format("MMMM Do YYYY");
+    $scope.strTime = moment($scope.time).format("A h:mm");
+  };
+
 
     $scope.init = function () {
        for (var i in gApp.json.timezones) {
@@ -26,13 +51,12 @@ app.controller('fpcalcCtrl', ['$scope', 'gApp', 'FourPillarCalc', function ($sco
         }
 
         //$("#lng").val("0.0");
-      $("#dtBox").DateTimePicker();
+      //$("#dtBox").DateTimePicker();
 
-        $("#datepicker").datebox();
-        $("#timepicker").datebox();
+      $scope.date = new Date("Month dd yyyy");
+      $scope.time = new Date("hh:mm");
 
-        $("#datepicker").datebox('setTheDate', new Date());
-        $("#timepicker").datebox('setTheDate', new Date());
+      $scope.updateBirth();
 
         $(".ui-icon-clock").addClass("afterBtn");
         $(".ui-icon-calendar").addClass("afterBtn");
@@ -97,8 +121,13 @@ app.controller('fpcalcCtrl', ['$scope', 'gApp', 'FourPillarCalc', function ($sco
         $("#lng").val(gApp.record.lng);
         $("#timezone").val( gApp.record.timeZone );
 
-        $("#datepicker").datebox('setTheDate', new Date(gApp.record.date));
-        $("#timepicker").datebox('setTheDate', new Date(gApp.record.time));
+        //$("#datepicker").datebox('setTheDate', new Date(gApp.record.date));
+        //$("#timepicker").datebox('setTheDate', new Date(gApp.record.time));
+
+        $scope.date = new Date(gApp.record.date);
+        $scope.time = new Date(gApp.record.time);
+
+      $scope.updateBirth();
 
         $scope.BBB = gApp.record.gender;
         $scope.dst = gApp.record.dst;
@@ -198,8 +227,8 @@ app.controller('fpcalcCtrl', ['$scope', 'gApp', 'FourPillarCalc', function ($sco
 
             gApp.record.lng = $("#lng").val();
 
-            gApp.record.date = $("#datepicker").datebox('getTheDate');
-            gApp.record.time = $("#timepicker").datebox('getTheDate');
+            gApp.record.date = $scope.date;
+            gApp.record.time = $scope.time;
 
             gApp.record.gender = $scope.BBB;
             gApp.record.dst = $scope.dst;
@@ -247,8 +276,8 @@ app.controller('fpcalcCtrl', ['$scope', 'gApp', 'FourPillarCalc', function ($sco
 
     // Compute
     $scope.compute = function () {
-        $scope.date = $("#datepicker").datebox('getTheDate');
-        $scope.time = $("#timepicker").datebox('getTheDate');
+        //$scope.date = $("#datepicker").datebox('getTheDate');
+        //$scope.time = $("#timepicker").datebox('getTheDate');
         $scope.ITZ = $("#timezone").val();
         $scope.longi = parseFloat($("#lng").val());
 

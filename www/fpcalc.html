@@ -86,7 +86,7 @@
                 <input type="text" data-field="date" readonly>
                 -->
 
-                  <input style="width:100%" name="datepicker" id="datepicker" type="text" data-role="datebox" data-options='{"mode":"datebox", "useNewStyle":true}' />
+                  <input ng-click="onDate($evt)" style="width:100%" ng-value="strDate" name="datepicker" id="datepicker" readonly />
 
               </ons-col>
           </ons-row>
@@ -103,7 +103,7 @@
                 <input type="text" data-field="time" readonly>
                 -->
 
-                <input style="width:100%" name="timepicker" id="timepicker" type="text" data-role="datebox" data-options='{"mode":"timeflipbox", "useNewStyle":true}' />
+                <input ng-click="onTime($evt)" style="width:100%" name="timepicker" ng-value="strTime" id="timepicker" readonly />
 
               </ons-col>
           </ons-row>

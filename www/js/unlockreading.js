@@ -80,6 +80,7 @@
         });
         store.error( function( e ) {
             alert( "Can't load store." );
+            $(".prodpending").hide();
 
 
             if ( e.code == store.ERR_SETUP ) {
@@ -376,6 +377,8 @@
         app.navi.resetToPage( 'lifereadings.html', { animation : 'slide', numeral: index + 1 } );
       }
     };
+
+    $scope.gotoPage = app.gotoPage;
 
     //$scope.init();
 

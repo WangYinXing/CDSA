@@ -3,7 +3,7 @@
         <div class="left">
             <ons-button modifier="quiet" ng-click="onClose();"><ons-icon  icon="ion-chevron-left"></ons-icon></ons-button>
         </div>
-        <div id="title" class="center">Your birth place.</div>   
+        <div id="title" class="center">Your birth place.</div>
     </ons-toolbar>
 
     <ons-list>
@@ -17,7 +17,7 @@
                 </ons-col>
             </ons-row>
         </ons-list-item>
-        <ons-list-item class="record-item list__item--tappable list__item__line-height" ng-repeat="item in items track by $index" modifier="chevron" ng-click="onClickItem($index);">
+        <ons-list-item class="record-item list__item--tappable list__item__line-height" ng-repeat="item in items | orderBy: 'name' track by $index" modifier="chevron" ng-click="onClickItem(item);">
             <ons-icon  icon="ion-clipboard"><span style="margin-left:10px; font-weight:100">{{item.name}}</span></ons-icon>
         </ons-list-item>
     </ons-list>

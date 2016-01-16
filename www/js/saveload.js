@@ -29,8 +29,9 @@
 
     };
 
-    $scope.onClickItem = function (index) {
+    $scope.onClickItem = function (item) {
         var record;
+      var index = gApp.records.indexOf(item);
 
         if (gApp.openMode == 0) {
             record = gApp.records[index];
@@ -40,39 +41,48 @@
                 return;
             }
 
-            gApp.record = record;            
+            gApp.record = record;
+
+          $scope.onClose();
         }
         // Save......
         else if (gApp.openMode == 1) {
-            if (!confirm("Are you sure want to overwrite on this record?"))
+            confirm("Are you sure want to overwrite on this record?", function(ret) {
+              if (ret == 0)
                 return;
 
-            // Replace name......
-            gApp.record.name = gApp.records[index].name;
 
-            gApp.records[ index ] = gApp.record;
+              // Replace name......
+              gApp.record.name = gApp.records[index].name;
 
-            window.localStorage["records"] = JSON.stringify(gApp.records);
+              gApp.records[ index ] = gApp.record;
+
+              window.localStorage["records"] = JSON.stringify(gApp.records);
 
 
-            alert("Record saved.");
+              alert("Record saved.");
+
+              $scope.onClose();
+            });
         }
         // Delete
         else if (gApp.openMode == 2) {
-            if (!confirm("Are you sure want to delete this record?", "asdasd"))
+            confirm("Are you sure want to delete this record?", function(ret) {
+              if (ret == 0)
                 return;
-            
-            gApp.records.splice(index, 1);
 
-            
+                gApp.records.splice(index, 1);
 
-            window.localStorage["records"] = JSON.stringify(gApp.records);
-            gApp.record = undefined;
+                window.localStorage["records"] = JSON.stringify(gApp.records);
+                gApp.record = undefined;
 
-            alert("Record deleted.");
+                alert("Record deleted.");
+
+                $scope.onClose();
+            });
         }
 
-        $scope.onClose();
+
     };
 
     $scope.onSave = function () {
@@ -93,35 +103,43 @@
         else {
             for (var i in gApp.records) {
                 if (gApp.records[i].name == name) {
-                    if (!confirm("The name you entered is used to another record. Do you want to overwrite it?"))
-                        return;
+                  existingItem = i;
 
-                    existingItem = i;
-                    break;
+                  confirm("The name you entered is used to another record. Do you want to overwrite it?", function(ret) {
+                    if (ret == 0)
+                      return;
+
+                    $scope.save(existingItem);
+                    return;
+                  });
                 }
 
             }
         }
 
-        gApp.record.name = $('#name').val();
-        
-        if (existingItem == -1)
-            gApp.records.push(gApp.record);
-        else
-            gApp.records[existingItem] = gApp.record;
-
-        window.localStorage["records"] = JSON.stringify(gApp.records);
-
-        $scope.onClose();
+      $scope.save(-1);
     };
+
+  $scope.save = function(existingItem) {
+    gApp.record.name = $('#name').val();
+
+    if (existingItem == -1)
+      gApp.records.push(gApp.record);
+    else
+      gApp.records[existingItem] = gApp.record;
+
+    window.localStorage["records"] = JSON.stringify(gApp.records);
+
+    $scope.onClose();
+  }
 
     $scope.onClose = function () {
         gApp.gotoPage("fpcalc");
     };
 
     $scope.onClickDel = function () {
-        
+
     };
-    
+
     $scope.init();
 }]);

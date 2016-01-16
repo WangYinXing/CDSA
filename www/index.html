@@ -143,8 +143,16 @@
 
           window.alert = function(msg) {
             ons.notification.alert({
-              title: 'CDSA',
+              title: '',
               message: msg
+            });
+          };
+
+          window.confirm = function(msg, callback) {
+            ons.notification.confirm({
+              title: '',
+              message: msg,
+              callback: callback
             });
           };
 

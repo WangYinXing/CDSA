@@ -1,5 +1,5 @@
 <ons-page modifier="unlockreadings" on-device-backbutton="app.gotoPage('home');">
-  <div ng-if="platform == 'iOS' || platform == 'Android'" ng-controller="unlockreadingsCtrl"  ng-include="'templates/unlockreadingcontent.html'">
+  <div ng-if="platform == 'iOS' || platform == 'Android' || platform =='browser'" ng-controller="unlockreadingsCtrl"  ng-include="'templates/unlockreadingcontent.html'">
 
   </div>
 </ons-page>

@@ -744,13 +744,16 @@
               var stem = Math.floor(age % 10);
               var branch = Math.floor(age % 12);
 
-              arrAP.push({
-                  //MS: moment(pDate).add(year, 'years').format("YYYY"),
-                  //MS: (i * 10 + j + LP + year).toFixed(0),
-                  MS: year,
-                  LPS: gon[stem],
-                  LPB: ji[branch],
-              });
+              if (year >= YY) {
+                  arrAP.push({
+                    //MS: moment(pDate).add(year, 'years').format("YYYY"),
+                    //MS: (i * 10 + j + LP + year).toFixed(0),
+                    MS: year,
+                    LPS: gon[stem],
+                    LPB: ji[branch],
+                  });
+              }
+
           }
 
           if (i == -1) {
