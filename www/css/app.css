@@ -503,7 +503,7 @@ select, input {
 
 .pillar-text {
     font-family:"arial";
-    font-weight:900;
+    //font-weight:900;
     font-size: 0.9em;
 }
 

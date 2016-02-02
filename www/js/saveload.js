@@ -110,8 +110,9 @@
                       return;
 
                     $scope.save(existingItem);
-                    return;
                   });
+
+                  return;
                 }
 
             }
@@ -127,6 +128,8 @@
       gApp.records.push(gApp.record);
     else
       gApp.records[existingItem] = gApp.record;
+
+    alert("Record saved.");
 
     window.localStorage["records"] = JSON.stringify(gApp.records);
 

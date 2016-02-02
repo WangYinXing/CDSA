@@ -78,8 +78,12 @@
 
           console.log( gApp.loadedCount );
         });
+
+
         store.error( function( e ) {
             alert( "Can't load store." );
+
+
             $(".prodpending").hide();
 
 
@@ -87,24 +91,37 @@
               app.navi.resetToPage('home.html', {animation : 'slide'});
             }
         });
+
+
         store.ready(function() {
-          //alert("Restore completed.")
-          //$(".blackScreen").hide();
+
+          //alert("Restore completed.");
+          $(".prodpending").hide();
+          $(".blackScreen").hide();
           store.onFinish = function() { $(".blackScreen").hide(); }
           console.log( "Store is ready now *******************************************" );
+          gApp.initialized = true;
         });
 
 
-        gApp.initialized = true;
+
+
+
       }
 
 
-//      $scope.onRefresh();
+      $scope.onRefresh();
+      /*
+        setTimeout( function() {
+            $scope.onRefresh();
+        }, 1000 );
 
-      setTimeout( function() {
-        $scope.onRefresh();
-      }, 1000 );
 
+      $scope.storeTimer = setTimeout(function() {
+        alert( "Can't load store." );
+        app.navi.resetToPage('home.html', {animation : 'slide'});
+      }, 10000);
+*/
     };
 
     $scope.unlockAll = function() {
@@ -285,7 +302,6 @@
         return;
       }
 
-      $(".prodpending").show();
 
       if ( gApp.loadedCount >= 101 ) {
         $(".blackScreen").hide();

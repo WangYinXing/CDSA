@@ -89,7 +89,6 @@
       });
     }]);
 
-
     module.directive('compile', ['$compile', function ($compile) {
         return function(scope, element, attrs) {
             scope.$watch(
